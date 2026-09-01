@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>らへん 表紙デザイン共有</title>
+<style>
+  :root {
+    --paper: #F1ECE2;
+    --paper-raised: #FFFFFF;
+    --ink: #211D18;
+    --ink-soft: #6B6255;
+    --line: #DDD2BF;
+    --accent: #AD4A2A;
+    --shadow: 0 1px 2px rgba(33,29,24,.06), 0 8px 24px rgba(33,29,24,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16140F;
+      --paper-raised: #201C16;
+      --ink: #EFE8DA;
+      --ink-soft: #A69C89;
+      --line: #3A3226;
+      --accent: #E07A52;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; padding: 64px 28px; }
+  .kicker {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11.5px;
+    letter-spacing: .14em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin: 0 0 20px;
+  }
+  h1 {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-weight: 600;
+    font-size: clamp(30px, 6vw, 42px);
+    line-height: 1.3;
+    margin: 0 0 18px;
+  }
+  p.lead { color: var(--ink-soft); font-size: 15px; margin: 0 0 40px; max-width: 46em; }
+  .links { display: grid; gap: 16px; }
+  a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: 22px 24px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(33,29,24,.1), 0 16px 32px rgba(33,29,24,.12); }
+  a.card .tag {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    color: var(--accent);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+  }
+  a.card .name {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  a.card .desc { font-size: 13px; color: var(--ink-soft); }
+  footer { margin-top: 40px; font-size: 12px; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">unpont free paper — Vol.01 創刊号 制作提案</p>
+  <h1>らへん 表紙デザイン共有</h1>
+  <p class="lead">創刊号の表紙候補デザインを2本まとめています。まず最終候補からご覧ください。</p>
+  <div class="links">
+    <a class="card" href="gallery-final.html">
+      <span class="tag">最新・改訂版</span>
+      <span class="name">表紙デザイン 最終候補8案</span>
+      <span class="desc">誌名ロゴをフォントに頼らず素材でつくる方式へ、3案を刷新した最終セット。</span>
+    </a>
+    <a class="card" href="gallery-previous.html">
+      <span class="tag">前回まとめ</span>
+      <span class="name">表紙デザイン候補8案（初回）</span>
+      <span class="desc">最初に整理した8案のギャラリー。参考として残しています。</span>
+    </a>
+  </div>
+  <footer>© unpont — 社内検討用資料</footer>
+</div>
+</body>
+</html>
