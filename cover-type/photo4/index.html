@@ -1,33 +1,157 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>らへん 表紙の型 写真4：ガレット（横から）</title><style>
-:root{--bg:#f3f1ec;--card:#fff;--ink:#1f1d1a;--sub:#6b665d;--line:#ddd6c8}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans",sans-serif;line-height:1.7}
-header,main{max-width:1180px;margin:0 auto;padding:0 20px}header{padding-top:36px}h1{font-size:26px;margin:0 0 6px}
-.lead{color:var(--sub);font-size:14px;margin:0 0 18px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 18px;font-size:14px}
-.box h2{font-size:15px;margin:0 0 6px}.box ul{margin:0;padding-left:1.2em}
-h2.sec{font-size:19px;margin:34px 0 10px;padding-top:10px;border-top:1px solid var(--line)}
-.type{margin:0 0 30px}.type h3{font-size:17px;margin:0 0 2px}.note{color:var(--sub);font-size:13px;margin:0 0 10px}
-.tri{display:grid;grid-template-columns:0.8fr 1fr 1fr;gap:16px;align-items:start}
-figure{margin:0}figure img{width:100%;display:block;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);background:#fff}
-figure.base img{opacity:.92}figcaption{font-size:12px;color:var(--sub);margin-top:6px}a{color:#8a4b2a}
-.tw{overflow-x:auto}table{min-width:640px;width:100%;border-collapse:collapse;background:var(--card);font-size:13px}th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}th{background:#faf8f3}
-.wide img{width:100%;display:block;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.15)}
-@media(max-width:760px){.tri{grid-template-columns:1fr 1fr}.tri .base{grid-column:1/3}}
-</style></head><body><header><h1>らへん 表紙の型　5種 × 明朝体／ゴシック体<br><span style="font-size:18px">写真4：ガレット（横から）</span></h1><p class="lead" style="margin:6px 0 16px"><a href="../index.html">← 写真別一覧</a>　｜　版：<a href="../photo1/index.html">写真1：ガレットとカフェラテ（真俯瞰）</a>　／　<a href="../photo2/index.html">写真2：マフィンを並べる手元</a>　／　<a href="../photo3/index.html">写真3：クレープ（バターと砂糖）</a>　／　<b>写真4：ガレット（横から）</b></p>
-<p class="lead">2026-09-22 MTGで絞った5案（v1-01・v1-02・v1-07・v6-01・v6-03）を土台に、B5実寸（182×257mm）で型として組み直したもの。</p>
-<div class="box"><h2>この比較の条件</h2><ul>
+:root{--key:#0017C1;--key-1200:#000060;--key-600:#3460FB;--key-400:#7096F8;--key-200:#C5D7FB;--key-50:#D9E6FF;
+--sub:#FFC700;--sub-600:#D2A400;--sub-800:#A58000;
+--g50:#F2F2F2;--g200:#CCCCCC;--g400:#999999;--g536:#767676;--g700:#4D4D4D;--g900:#1A1A1A;
+--bg:#F8F8FB;--surface:#FFFFFF;--control:#F1F1F4;--text:#1A1A1A;--label:#626264;--link:#0017C1;
+--success:#197A4B;--error:#CE0000;--line:#CCCCCC;
+--f1:12px;--f2:14px;--f3:16px;--f4:20px;--f5:28px;--f6:36px;
+--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--r:8px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+font-size:var(--f2);line-height:1.7;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+a{color:var(--link);text-underline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:var(--s6) var(--s5) var(--s7)}
+/* ページの見出しとメタ情報（左上に題名、右にいつ・何の資料か） */
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--s3) var(--s5);padding-bottom:var(--s4);border-bottom:2px solid var(--key);margin-bottom:var(--s5)}
+.top>div{flex:1 1 520px;min-width:0} .top .meta{flex:none}
+.top .eyebrow{margin:0 0 var(--s1);font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
+.top h1{margin:0;font-size:var(--f5);line-height:1.35;font-weight:700;word-break:auto-phrase}
+.top .sub{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
+.nb{display:inline-block}
+.meta{display:grid;grid-template-columns:auto auto;gap:2px var(--s3);font-size:var(--f1);color:var(--label);margin:0}
+.meta dt{font-weight:700} .meta dd{margin:0;color:var(--text)}
+/* 節の見出し（小さな番号＋見出し） */
+.sec{margin:var(--s7) 0 var(--s4)}
+.sec .no{display:block;font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
+.sec h2{margin:0;font-size:var(--f4);font-weight:700;color:var(--key);line-height:1.4}
+.sec p{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
+/* 区画 */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4) var(--s5)}
+.card>h3{margin:0 0 var(--s2);font-size:var(--f3);font-weight:700}
+.muted{color:var(--label)}
+/* 大きな数字（強調は1つだけ .hl） */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s3)}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s4)}
+.kpi .k{display:block;font-size:var(--f1);font-weight:700;color:var(--label)}
+.kpi .v{display:block;font-size:var(--f6);font-weight:700;line-height:1.2;margin-top:var(--s1)}
+.kpi .v small{font-size:var(--f3);font-weight:700;margin-left:2px}
+.kpi .d{display:block;font-size:var(--f1);color:var(--label);margin-top:2px;word-break:auto-phrase}
+.kpi.hl{background:var(--key);border-color:var(--key);color:#fff} .kpi.hl .k,.kpi.hl .d{color:#fff}
+.kpi a{color:inherit}
+/* 表 */
+.tbl{width:100%;border-collapse:collapse;background:var(--surface);font-size:var(--f2)}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:var(--s2) var(--s3);text-align:left;vertical-align:top}
+.tbl thead th{background:var(--key-50);font-size:var(--f1);font-weight:700;border-bottom:1px solid var(--key-200)}
+.tbl tbody th{font-weight:700;white-space:nowrap}
+.tbl .num{text-align:right;white-space:nowrap}
+.bar{display:inline-block;height:8px;background:var(--key);border-radius:2px;vertical-align:middle}
+/* 状態の印（記号＋文字。色は「要確認」「要検討」だけ強く使う） */
+.st{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;line-height:1.5;padding:0 6px 0 4px;border-radius:9px;border:1px solid;background:#fff;white-space:nowrap;text-decoration:none}
+.st svg{width:11px;height:11px;flex:none}
+.st.ok{color:var(--g700);border-color:var(--g700)}
+.st.tmp{color:var(--g700);border-color:var(--g536);border-style:dashed}
+.st.wait{color:var(--g700);border-color:var(--g700)}
+.st.add{color:var(--g700);border-color:var(--g536);border-style:dashed}
+.st.q{color:#fff;background:var(--error);border-color:var(--error)}
+.st.kentou{color:var(--error);border-color:var(--error);border-width:1.5px}
+/* 切り替え（選んでいるものは塗り＋太字＋印） */
+.tabs{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0 0 var(--s5)}
+.tabs a,.tabs span{display:inline-block;padding:var(--s2) var(--s4);border-radius:var(--r);background:var(--surface);color:var(--text);text-decoration:none;font-size:var(--f2);border:1px solid var(--g536)}
+.tabs a:hover{border-color:var(--key)}
+.tabs [aria-current]{background:var(--key);border-color:var(--key);color:#fff;font-weight:700}
+.tabs [aria-current]::before{content:"● ";font-size:10px;vertical-align:1px}
+.navbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s4);margin:0 0 var(--s5)}
+.navbar .tabs{margin:0}
+.back{font-size:var(--f2);font-weight:700;text-decoration:none}
+/* 注記（短い見出し＋1〜2行） */
+.notes{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.notes li{font-size:var(--f2);color:var(--label);padding-left:var(--s3);border-left:3px solid var(--g200)}
+.notes li b{color:var(--text)}
+.notes li.dec{border-left-color:var(--key)}
+.notes li.need{border-left-color:var(--error)}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.tag.dec{background:var(--key-50);color:var(--key)}
+.tag.need{background:var(--error);color:#fff}
+.tag.kentou{background:#fff;color:var(--error);border:1px solid var(--error);padding:0 5px}
+details.more{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s5);margin-top:var(--s3)}
+details.more summary{cursor:pointer;font-weight:700;color:var(--key)}
+.foot{margin-top:var(--s7);padding-top:var(--s4);border-top:1px solid var(--line);font-size:var(--f1);color:var(--label)}
+.foot p{margin:0 0 var(--s1)}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+figcaption{font-size:var(--f1);color:var(--label);margin-top:var(--s1)}
+@media screen and (max-width:760px){
+  .wrap{padding:var(--s5) var(--s4) var(--s6)}
+  .top h1{font-size:24px}
+  .kpi .v{font-size:28px}
+}
+
+.ph{margin:2px 0 0;font-size:var(--f4);font-weight:700}
+.decide{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.decide li{display:flex;gap:var(--s2);align-items:baseline;font-size:var(--f3);font-weight:700}
+.decide .dn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:12px;background:var(--key);color:#fff;font-size:var(--f1)}
+.lead2{display:grid;grid-template-columns:2fr 3fr;gap:var(--s4);align-items:start}
+.find{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.find li{font-size:var(--f2);color:var(--label);padding-left:var(--s3);border-left:3px solid var(--key-200)}
+.find li b{color:var(--text)}
+.toc{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);font-size:var(--f1);margin:0 0 var(--s3)}
+.types{display:grid;gap:var(--s4)}
+.type-h{display:flex;align-items:baseline;gap:var(--s2)}
+.type-h h3{margin:0;font-size:var(--f3)}
+.tno{font-size:var(--f1);font-weight:700;color:var(--key);background:#fff;border:1px solid var(--key);border-radius:4px;padding:0 6px}
+.type .note{margin:var(--s1) 0 var(--s3);color:var(--label);font-size:var(--f2)}
+.tri{display:grid;grid-template-columns:.72fr 1fr 1fr;gap:var(--s4);align-items:start}
+figure.base img{opacity:.85}
+figure.base figcaption{color:var(--g536)}
+.tag.ref{background:var(--g50);color:var(--g700);border:1px solid var(--g200)}
+.pdf{margin-left:var(--s2);font-weight:700}
+.wide img{display:block;width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+.rec{border-left:4px solid var(--key)}
+.rec h3{color:var(--key)}
+.rec ul{margin:0;padding-left:1.2em}
+.tw{overflow-x:auto;padding:0}
+.tw .tbl{min-width:680px}
+.more ul{margin:var(--s2) 0 0;padding-left:1.2em}
+@media screen and (max-width:900px){.lead2{grid-template-columns:1fr}}
+@media screen and (max-width:760px){.tri{grid-template-columns:1fr 1fr}.tri .base{grid-column:1/3;max-width:60%}}
+</style></head><body><div class="wrap">
+<header class="top"><div><p class="eyebrow">らへん 表紙の型</p><h1>5種 × 明朝体／ゴシック体</h1><p class="ph">写真4：ガレット（横から）</p>
+<p class="sub">2026-09-22 MTGで絞った5案（v1-01・v1-02・v1-07・v6-01・v6-03）を土台に、B5実寸で型として組み直したもの。</p></div><dl class="meta"><dt>写真</dt><dd>写真4：ガレット（横から）</dd><dt>更新</dt><dd>2026-09-27</dd><dt>もとにした資料</dt><dd>MTGで選んだ5案</dd><dt>判型</dt><dd>B5（182×257mm）</dd></dl></header>
+<div class="navbar"><a class="back" href="../index.html">← 写真別の一覧</a><nav class="tabs" aria-label="写真の版"><a href="../photo1/index.html">写真1：ガレットとカフェラテ（真俯瞰）</a><a href="../photo2/index.html">写真2：マフィンを並べる手元</a><a href="../photo3/index.html">写真3：クレープ（バターと砂糖）</a><span aria-current="page">写真4：ガレット（横から）</span></nav></div>
+<div class="lead2">
+<div class="card"><h3>このページで決めること</h3><ol class="decide"><li><span class="dn">1</span>5つの型から、使う型を1つに絞る（型が決まったら毎号使い回す・9/22 MTG）</li><li><span class="dn">2</span>誌名の書体の系統を、明朝体かゴシック体かで決める</li><li><span class="dn">3</span>決めた系統で誌名の書体を選ぶ（Kojiのオススメ：A1明朝 Bold／A1ゴシック B）</li></ol></div>
+<div class="card"><h3>検証で分かったこと（判断の材料）</h3><ul class="find"><li><b>ラック：</b>10枚すべてで誌名とTAKE FREEは見える。白帯・らへん標本・v6の2案では、サラダの頭（葉の先）がポケットの上に見える。四季色では灰色の壁しか見えない。</li><li><b>写真の性格：</b>横から撮った写真なので、皿の奥に灰色の壁が広く入る。写真の下3分の1は皿と卓の暗い部分になる。</li><li><b>白帯のキャッチ：</b>上半分は灰色の壁、下半分はサラダの葉にかかる。黒文字で読めるが、写真1〜3より背景がにぎやか。</li><li><b>遠目：</b>誌名はどの型も帯の上にあり写真に重ならないので、写真を替えても読みやすさは写真1の版と同じ。3.7m相当ではv6の2案がいちばん読みやすく、白帯がいちばん弱い。</li><li><b>TAKE FREE：</b>四角い線のラベルは手に取る距離では読める。視力1.0の人が読めるのは約1.9mまでの計算で、3.7m相当では枠の形だけが見える（写真1の版と同じ）。</li><li><b>解像度：</b>横位置2000×1333pxの写真を縦長の枠に入れているため、写真の高さで決まる。白帯で約146dpi、v6の2案で約171〜174dpi。印刷には元の高解像度データが要る。</li></ul></div>
+</div>
+
+<div class="sec"><span class="no">01</span><h2>5つの型：元案／明朝体／ゴシック体</h2><p>画像を押すと、B5実寸のPDFが開く。元案は参考として小さく薄く出している。</p></div>
+<div class="toc"><a href="#t1">v1-01 白帯</a><a href="#t2">v1-02 四季色</a><a href="#t3">v1-07 らへん標本</a><a href="#t4">v6-01 朝の一皿</a><a href="#t5">v6-03 畑がある</a></div>
+<div class="types"><section class="type card" id="t1"><div class="type-h"><span class="tno">t1</span><h3>v1-01 白帯</h3></div><p class="note">上端24.5mmの白帯に誌名だけ。写真は帯の下すべて。キャッチは写真の上に縦組み（写真の右上が明るいので黒文字）。</p><div class="tri"><figure class="base"><img src="web/base_t1.jpg" alt="v1-01 白帯 の元案（MTGで選んだもの）"><figcaption><span class="tag ref">参考</span>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t1_mincho.pdf"><img src="web/t1_mincho.jpg" alt="v1-01 白帯 明朝体・写真4：ガレット（横から）"></a><figcaption><b>明朝体</b>（凸版文久見出し明朝 EB）<a class="pdf" href="t1_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t1_gothic.pdf"><img src="web/t1_gothic.jpg" alt="v1-01 白帯 ゴシック体・写真4：ガレット（横から）"></a><figcaption><b>ゴシック体</b>（凸版文久見出しゴシック EB）<a class="pdf" href="t1_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type card" id="t2"><div class="type-h"><span class="tno">t2</span><h3>v1-02 四季色</h3></div><p class="note">上99.7mmが季節色の帯（号ごとに色替え）。誌名とキャッチは帯の中央。写真は下157.3mm。</p><div class="tri"><figure class="base"><img src="web/base_t2.jpg" alt="v1-02 四季色 の元案（MTGで選んだもの）"><figcaption><span class="tag ref">参考</span>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t2_mincho.pdf"><img src="web/t2_mincho.jpg" alt="v1-02 四季色 明朝体・写真4：ガレット（横から）"></a><figcaption><b>明朝体</b>（凸版文久見出し明朝 EB）<a class="pdf" href="t2_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t2_gothic.pdf"><img src="web/t2_gothic.jpg" alt="v1-02 四季色 ゴシック体・写真4：ガレット（横から）"></a><figcaption><b>ゴシック体</b>（凸版文久見出しゴシック EB）<a class="pdf" href="t2_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type card" id="t3"><div class="type-h"><span class="tno">t3</span><h3>v1-07 らへん標本</h3></div><p class="note">白地。誌名とキャッチは右寄せ。写真は上62mmから白フチ6.1mmで配置。</p><div class="tri"><figure class="base"><img src="web/base_t3.jpg" alt="v1-07 らへん標本 の元案（MTGで選んだもの）"><figcaption><span class="tag ref">参考</span>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t3_mincho.pdf"><img src="web/t3_mincho.jpg" alt="v1-07 らへん標本 明朝体・写真4：ガレット（横から）"></a><figcaption><b>明朝体</b>（凸版文久見出し明朝 EB）<a class="pdf" href="t3_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t3_gothic.pdf"><img src="web/t3_gothic.jpg" alt="v1-07 らへん標本 ゴシック体・写真4：ガレット（横から）"></a><figcaption><b>ゴシック体</b>（凸版文久見出しゴシック EB）<a class="pdf" href="t3_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type card" id="t4"><div class="type-h"><span class="tno">t4</span><h3>v6-01 朝の一皿</h3></div><p class="note">上62.2mmの生成り地に大きな誌名とキャッチ。写真は下194.8mm。TAKE FREEは帯の右下。</p><div class="tri"><figure class="base"><img src="web/base_t4.jpg" alt="v6-01 朝の一皿 の元案（MTGで選んだもの）"><figcaption><span class="tag ref">参考</span>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t4_mincho.pdf"><img src="web/t4_mincho.jpg" alt="v6-01 朝の一皿 明朝体・写真4：ガレット（横から）"></a><figcaption><b>明朝体</b>（凸版文久見出し明朝 EB）<a class="pdf" href="t4_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t4_gothic.pdf"><img src="web/t4_gothic.jpg" alt="v6-01 朝の一皿 ゴシック体・写真4：ガレット（横から）"></a><figcaption><b>ゴシック体</b>（凸版文久見出しゴシック EB）<a class="pdf" href="t4_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type card" id="t5"><div class="type-h"><span class="tno">t5</span><h3>v6-03 畑がある</h3></div><p class="note">上58.7mmの生成り地に誌名・キャッチ・英語タグライン。TAKE FREEは帯の左下。</p><div class="tri"><figure class="base"><img src="web/base_t5.jpg" alt="v6-03 畑がある の元案（MTGで選んだもの）"><figcaption><span class="tag ref">参考</span>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t5_mincho.pdf"><img src="web/t5_mincho.jpg" alt="v6-03 畑がある 明朝体・写真4：ガレット（横から）"></a><figcaption><b>明朝体</b>（凸版文久見出し明朝 EB）<a class="pdf" href="t5_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t5_gothic.pdf"><img src="web/t5_gothic.jpg" alt="v6-03 畑がある ゴシック体・写真4：ガレット（横から）"></a><figcaption><b>ゴシック体</b>（凸版文久見出しゴシック EB）<a class="pdf" href="t5_gothic.pdf">PDF</a></figcaption></figure></div></section></div>
+
+<div class="sec"><span class="no">02</span><h2>ラック想定</h2><p>前のポケットで下が隠れた状態。見えるのは上から約108mm。</p></div>
+<div class="wide"><a href="web/rack.jpg"><img src="web/rack.jpg" alt="10枚をラックに差した想定。上から約108mmだけが見える"></a></div>
+
+<div class="sec"><span class="no">03</span><h2>遠目想定（2.5m・3.7m）</h2><p>画面の表示倍率で見え方が変わるため、型どうしの相対比較用。実際の読みやすさはB5実寸の出力を離れて見て確かめる。</p></div>
+<div class="wide"><a href="web/distance.jpg"><img src="web/distance.jpg" alt="2.5mと3.7m相当に縮めた見え方の比較"></a></div>
+
+<div class="sec"><span class="no">04</span><h2>誌名の書体候補</h2><p>明朝かゴシックかを決めたあとに選ぶ。</p></div>
+<div class="card rec"><h3>Kojiのオススメ：A1明朝 Bold／A1ゴシック B</h3><ul><li>どちらも、しっかりした形・読みやすさと抜け感をもった書体。</li><li>A1ゴシックは太さの種類（L・R・M・B）もあるので使い勝手が良い。</li><li>下の比較では、オススメの2つを枠で囲んでいる。</li></ul></div>
+<div class="wide" style="margin-top:var(--s3)"><a href="web/fonts.jpg"><img src="web/fonts.jpg" alt="誌名の書体候補の比較（v6-01の上部）"></a></div>
+
+<div class="sec"><span class="no">05</span><h2>型の寸法（B5・単位mm）</h2></div>
+<div class="card tw"><table class="tbl"><thead><tr><th>型</th><th>上の帯</th><th>誌名</th><th>キャッチ</th><th>TAKE FREE</th><th>写真</th></tr></thead><tbody><tr><th>v1-01 白帯</th><td>24.5</td><td>中央・15.3・字間0.32em</td><td>写真の右上に縦組み2行・6.1（写真の明るさで黒／白）</td><td>帯の左・ラベル</td><td>24.5〜257（全面）</td></tr><tr><th>v1-02 四季色</th><td>99.7（季節色）</td><td>中央・29.4</td><td>誌名の下・5.1</td><td>帯の左下・ラベル</td><td>99.7〜257（全面）</td></tr><tr><th>v1-07 らへん標本</th><td>なし（白地）</td><td>右寄せ・21.4</td><td>誌名の下に右寄せ・4.7</td><td>左・キャッチと同じ行・ラベル</td><td>62〜250.9（左右下6.1の白フチ）</td></tr><tr><th>v6-01 朝の一皿</th><td>62.2（生成り）</td><td>中央・30.6</td><td>誌名の下・5.6</td><td>帯の右下・ラベル</td><td>62.2〜257（全面）</td></tr><tr><th>v6-03 畑がある</th><td>58.7（生成り）</td><td>中央・30.6</td><td>誌名の下・5.4＋英語2.8</td><td>帯の左下・ラベル</td><td>58.7〜257（全面）</td></tr></tbody></table></div>
+
+<div class="sec"><span class="no">06</span><h2>補足</h2></div>
+<details class="more"><summary>この比較の条件</summary><ul>
 <li>判型はB5（182×257mm）を想定。元案の比率を保ったまま、A5で組んでいた型を約1.22倍に広げた（A5とB5は縦横比がほぼ同じ）。</li>
-<li>MTGの必須4点（誌名が上・美味しそうな写真・TAKE FREEが分かる・型として毎号使い回せる）を基準に組んだ。満たし方には型ごとに差がある（下の「検証で分かったこと」）。TAKE FREEは四角い線で囲んだ1行のラベル（線・文字とも黒、幅約30mm×高さ約7.1mm）にそろえた。</li>
+<li>MTGの必須4点（誌名が上・美味しそうな写真・TAKE FREEが分かる・型として毎号使い回せる）を基準に組んだ。満たし方には型ごとに差がある（上の「検証で分かったこと」）。TAKE FREEは四角い線で囲んだ1行のラベル（線・文字とも黒、幅約30mm×高さ約7.1mm）にそろえた。</li>
 <li>比べるのは和文の書体系統（明朝かゴシックか）。誌名・キャッチ・説明文の和文だけが切り替わり、骨格が同じ一族（凸版文久見出し明朝 EB／凸版文久見出しゴシック EB）を使う。号数・英語・TAKE FREEの欧文は両方で共通。</li>
-<li>土台はMTGで見た元案の画像。帯の高さ・写真の範囲は画像から測った比率をB5に写した。</li><li>外周の余白9.8mm、小さな文字2.8mm、生成りの色、TAKE FREEのラベルの大きさは5型でそろえた。写真も5型すべて同じ1枚にしたので、型どうしの差はレイアウトだけで比べられる。</li></ul></div>
-<div class="box"><h2>仮で入れているもの（決まり次第差し替え）</h2><ul>
+<li>土台はMTGで見た元案の画像。帯の高さ・写真の範囲は画像から測った比率をB5に写した。</li><li>外周の余白9.8mm、小さな文字2.8mm、生成りの色、TAKE FREEのラベルの大きさは5型でそろえた。写真も5型すべて同じ1枚にしたので、型どうしの差はレイアウトだけで比べられる。</li></ul></details>
+<details class="more" open><summary>仮で入れているもの（決まり次第差し替え）</summary><ul>
 <li>写真：2026-09-26 にKojiから受け取った写真4（サラダと生ハムをのせたガレットを横から）を5型すべてに入れた。横位置（2000×1333px）なので、縦長の写真枠では左右を切り出している。切り出す位置は、型ごとに主役が枠に入るよう合わせた。印刷には元の高解像度データに差し替える。</li>
 <li>キャッチ：確定済みの「このへんには、いいものがある。」を仮置き。号ごとの特集キャッチはこの位置に入る。</li>
-<li>号数・季節：石丸案の「NO. 0」＋仮の「2026 WINTER」。元案は「Vol.1」だったので正式な表記は要確認。</li><li>t4・t5 左上の説明文「東京の西らへんの／食のフリーペーパー」：確定済みの媒体の説明（食に特化した地域フリーペーパー）から書いた仮の文言。</li><li>四季色の帯：元案の色（#DAE1C8）のまま。季節ごとの4色は未定。</li></ul></div><div class="box" style="border-color:#c9a27e"><h2>検証で分かったこと（判断材料）</h2><ul><li><b>ラック：</b>10枚すべてで誌名とTAKE FREEは見える。白帯・らへん標本・v6の2案では、サラダの頭（葉の先）がポケットの上に見える。四季色では灰色の壁しか見えない。</li><li><b>写真の性格：</b>横から撮った写真なので、皿の奥に灰色の壁が広く入る。写真の下3分の1は皿と卓の暗い部分になる。</li><li><b>白帯のキャッチ：</b>上半分は灰色の壁、下半分はサラダの葉にかかる。黒文字で読めるが、写真1〜3より背景がにぎやか。</li><li><b>遠目：</b>誌名はどの型も帯の上にあり写真に重ならないので、写真を替えても読みやすさは写真1の版と同じ。3.7m相当ではv6の2案がいちばん読みやすく、白帯がいちばん弱い。</li><li><b>TAKE FREE：</b>四角い線のラベルは手に取る距離では読める。視力1.0の人が読めるのは約1.9mまでの計算で、3.7m相当では枠の形だけが見える（写真1の版と同じ）。</li><li><b>解像度：</b>横位置2000×1333pxの写真を縦長の枠に入れているため、写真の高さで決まる。白帯で約146dpi、v6の2案で約171〜174dpi。印刷には元の高解像度データが要る。</li></ul></div></header>
-<main><h2 class="sec">5つの型：元案／明朝体／ゴシック体</h2><section class="type"><h3>v1-01 白帯</h3><p class="note">上端24.5mmの白帯に誌名だけ。写真は帯の下すべて。キャッチは写真の上に縦組み（写真の右上が明るいので黒文字）。</p><div class="tri"><figure class="base"><img src="web/base_t1.jpg"><figcaption>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t1_mincho.pdf"><img src="web/t1_mincho.jpg"></a><figcaption>明朝体（凸版文久見出し明朝 EB）　<a href="t1_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t1_gothic.pdf"><img src="web/t1_gothic.jpg"></a><figcaption>ゴシック体（凸版文久見出しゴシック EB）　<a href="t1_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type"><h3>v1-02 四季色</h3><p class="note">上99.7mmが季節色の帯（号ごとに色替え）。誌名とキャッチは帯の中央。写真は下157.3mm。</p><div class="tri"><figure class="base"><img src="web/base_t2.jpg"><figcaption>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t2_mincho.pdf"><img src="web/t2_mincho.jpg"></a><figcaption>明朝体（凸版文久見出し明朝 EB）　<a href="t2_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t2_gothic.pdf"><img src="web/t2_gothic.jpg"></a><figcaption>ゴシック体（凸版文久見出しゴシック EB）　<a href="t2_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type"><h3>v1-07 らへん標本</h3><p class="note">白地。誌名とキャッチは右寄せ。写真は上62mmから白フチ6.1mmで配置。</p><div class="tri"><figure class="base"><img src="web/base_t3.jpg"><figcaption>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t3_mincho.pdf"><img src="web/t3_mincho.jpg"></a><figcaption>明朝体（凸版文久見出し明朝 EB）　<a href="t3_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t3_gothic.pdf"><img src="web/t3_gothic.jpg"></a><figcaption>ゴシック体（凸版文久見出しゴシック EB）　<a href="t3_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type"><h3>v6-01 朝の一皿</h3><p class="note">上62.2mmの生成り地に大きな誌名とキャッチ。写真は下194.8mm。TAKE FREEは帯の右下。</p><div class="tri"><figure class="base"><img src="web/base_t4.jpg"><figcaption>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t4_mincho.pdf"><img src="web/t4_mincho.jpg"></a><figcaption>明朝体（凸版文久見出し明朝 EB）　<a href="t4_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t4_gothic.pdf"><img src="web/t4_gothic.jpg"></a><figcaption>ゴシック体（凸版文久見出しゴシック EB）　<a href="t4_gothic.pdf">PDF</a></figcaption></figure></div></section><section class="type"><h3>v6-03 畑がある</h3><p class="note">上58.7mmの生成り地に誌名・キャッチ・英語タグライン。TAKE FREEは帯の左下。</p><div class="tri"><figure class="base"><img src="web/base_t5.jpg"><figcaption>元案（MTGで選んだもの）</figcaption></figure><figure><a href="t5_mincho.pdf"><img src="web/t5_mincho.jpg"></a><figcaption>明朝体（凸版文久見出し明朝 EB）　<a href="t5_mincho.pdf">PDF</a></figcaption></figure><figure><a href="t5_gothic.pdf"><img src="web/t5_gothic.jpg"></a><figcaption>ゴシック体（凸版文久見出しゴシック EB）　<a href="t5_gothic.pdf">PDF</a></figcaption></figure></div></section>
-<h2 class="sec">ラック想定（前のポケットで下が隠れた状態）</h2><div class="wide"><img src="web/rack.jpg"></div>
-<h2 class="sec">遠目想定（2.5m・3.7m）</h2><p class="lead">画面の表示倍率で見え方が変わるため、型どうしの相対比較用。実際の読みやすさはB5実寸の出力を離れて見て確かめる。</p><div class="wide"><img src="web/distance.jpg"></div>
-<h2 class="sec">誌名の書体候補（明朝かゴシックかを決めたあとに選ぶ）</h2><div class="box" style="border-color:#B4532A;border-left:5px solid #B4532A"><h2 style="color:#B4532A">Kojiのオススメ：A1明朝 Bold／A1ゴシック B</h2><ul><li>どちらも、しっかりした形・読みやすさと抜け感をもった書体。</li><li>A1ゴシックは太さの種類（L・R・M・B）もあるので使い勝手が良い。</li><li>下の比較では、オススメの2つを枠で囲んでいる。</li></ul></div><div class="wide"><img src="web/fonts.jpg"></div>
-<h2 class="sec">型の寸法（B5・mm）</h2><div class="tw"><table><tr><th>型</th><th>上の帯</th><th>誌名</th><th>キャッチ</th><th>TAKE FREE</th><th>写真</th></tr><tr><td>v1-01 白帯</td><td>24.5mm</td><td>中央・15.3mm・字間0.32em</td><td>写真の右上に縦組み2行・6.1mm（写真の明るさで黒／白）</td><td>帯の左・ラベル</td><td>24.5〜257mm（全面）</td></tr><tr><td>v1-02 四季色</td><td>99.7mm（季節色）</td><td>中央・29.4mm</td><td>誌名の下・5.1mm</td><td>帯の左下・ラベル</td><td>99.7〜257mm（全面）</td></tr><tr><td>v1-07 らへん標本</td><td>なし（白地）</td><td>右寄せ・21.4mm</td><td>誌名の下に右寄せ・4.7mm</td><td>左・キャッチと同じ行・ラベル</td><td>62〜250.9mm（左右下6.1mmの白フチ）</td></tr><tr><td>v6-01 朝の一皿</td><td>62.2mm（生成り）</td><td>中央・30.6mm</td><td>誌名の下・5.6mm</td><td>帯の右下・ラベル</td><td>62.2〜257mm（全面）</td></tr><tr><td>v6-03 畑がある</td><td>58.7mm（生成り）</td><td>中央・30.6mm</td><td>誌名の下・5.4mm＋英語2.8mm</td><td>帯の左下・ラベル</td><td>58.7〜257mm（全面）</td></tr></table></div>
-<p class="lead" style="margin-top:14px">元データ：assets/edit/cover-type/（型のHTML・生成スクリプト）。書き出し：output/cover-type_写真4_ガレット横から/（PNG・PDF）。型のHTML：assets/edit/cover-type/variants/p4/。</p></main></body></html>
+<li>号数・季節：編集長案の「NO. 0」＋仮の「2026 WINTER」。元案は「Vol.1」だったので正式な表記は要確認。</li><li>t4・t5 左上の説明文「東京の西らへんの／食のフリーペーパー」：確定済みの媒体の説明（食に特化した地域フリーペーパー）から書いた仮の文言。</li><li>四季色の帯：元案の色（#DAE1C8）のまま。季節ごとの4色は未定。</li></ul></details>
+
+<footer class="foot"><p>元データ：assets/edit/cover-type/（型のHTML・生成スクリプト）。書き出し：output/cover-type_写真4_ガレット横から/（PNG・PDF）。型のHTML：assets/edit/cover-type/variants/p4/。</p><p>デザインの考え方と配色は、デジタル庁「ダッシュボードデザインの実践ガイドブック」（2026年3月31日更新）をもとにした。</p></footer>
+</div></body></html>
