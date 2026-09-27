@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>らへん 台割 20P</title>
+<style>
+:root{--key:#0017C1;--key-1200:#000060;--key-600:#3460FB;--key-400:#7096F8;--key-200:#C5D7FB;--key-50:#D9E6FF;
+--sub:#FFC700;--sub-600:#D2A400;--sub-800:#A58000;
+--g50:#F2F2F2;--g200:#CCCCCC;--g400:#999999;--g536:#767676;--g700:#4D4D4D;--g900:#1A1A1A;
+--bg:#F8F8FB;--surface:#FFFFFF;--control:#F1F1F4;--text:#1A1A1A;--label:#626264;--link:#0017C1;
+--success:#197A4B;--error:#CE0000;--line:#CCCCCC;
+--f1:12px;--f2:14px;--f3:16px;--f4:20px;--f5:28px;--f6:36px;
+--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--r:8px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+font-size:var(--f2);line-height:1.7;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+a{color:var(--link);text-underline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:var(--s6) var(--s5) var(--s7)}
+/* ページの見出しとメタ情報（左上に題名、右にいつ・何の資料か） */
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--s3) var(--s5);padding-bottom:var(--s4);border-bottom:2px solid var(--key);margin-bottom:var(--s5)}
+.top>div{flex:1 1 520px;min-width:0} .top .meta{flex:none}
+.top .eyebrow{margin:0 0 var(--s1);font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
+.top h1{margin:0;font-size:var(--f5);line-height:1.35;font-weight:700;word-break:auto-phrase}
+.top .sub{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
+.nb{display:inline-block}
+.meta{display:grid;grid-template-columns:auto auto;gap:2px var(--s3);font-size:var(--f1);color:var(--label);margin:0}
+.meta dt{font-weight:700} .meta dd{margin:0;color:var(--text)}
+/* 節の見出し（小さな番号＋見出し） */
+.sec{margin:var(--s7) 0 var(--s4)}
+.sec .no{display:block;font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
+.sec h2{margin:0;font-size:var(--f4);font-weight:700;color:var(--key);line-height:1.4}
+.sec p{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
+/* 区画 */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4) var(--s5)}
+.card>h3{margin:0 0 var(--s2);font-size:var(--f3);font-weight:700}
+.muted{color:var(--label)}
+/* 大きな数字（強調は1つだけ .hl） */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s3)}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s4)}
+.kpi .k{display:block;font-size:var(--f1);font-weight:700;color:var(--label)}
+.kpi .v{display:block;font-size:var(--f6);font-weight:700;line-height:1.2;margin-top:var(--s1)}
+.kpi .v small{font-size:var(--f3);font-weight:700;margin-left:2px}
+.kpi .d{display:block;font-size:var(--f1);color:var(--label);margin-top:2px;word-break:auto-phrase}
+.kpi.hl{background:var(--key);border-color:var(--key);color:#fff} .kpi.hl .k,.kpi.hl .d{color:#fff}
+.kpi a{color:inherit}
+/* 表 */
+.tbl{width:100%;border-collapse:collapse;background:var(--surface);font-size:var(--f2)}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:var(--s2) var(--s3);text-align:left;vertical-align:top}
+.tbl thead th{background:var(--key-50);font-size:var(--f1);font-weight:700;border-bottom:1px solid var(--key-200)}
+.tbl tbody th{font-weight:700;white-space:nowrap}
+.tbl .num{text-align:right;white-space:nowrap}
+.bar{display:inline-block;height:8px;background:var(--key);border-radius:2px;vertical-align:middle}
+/* 状態の印（記号＋文字。色は「要確認」「要検討」だけ強く使う） */
+.st{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;line-height:1.5;padding:0 6px 0 4px;border-radius:9px;border:1px solid;background:#fff;white-space:nowrap;text-decoration:none}
+.st svg{width:11px;height:11px;flex:none}
+.st.ok{color:var(--g700);border-color:var(--g700)}
+.st.tmp{color:var(--g700);border-color:var(--g536);border-style:dashed}
+.st.wait{color:var(--g700);border-color:var(--g700)}
+.st.add{color:var(--g700);border-color:var(--g536);border-style:dashed}
+.st.q{color:#fff;background:var(--error);border-color:var(--error)}
+.st.kentou{color:var(--error);border-color:var(--error);border-width:1.5px}
+/* 切り替え（選んでいるものは塗り＋太字＋印） */
+.tabs{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0 0 var(--s5)}
+.tabs a,.tabs span{display:inline-block;padding:var(--s2) var(--s4);border-radius:var(--r);background:var(--surface);color:var(--text);text-decoration:none;font-size:var(--f2);border:1px solid var(--g536)}
+.tabs a:hover{border-color:var(--key)}
+.tabs [aria-current]{background:var(--key);border-color:var(--key);color:#fff;font-weight:700}
+.tabs [aria-current]::before{content:"● ";font-size:10px;vertical-align:1px}
+.navbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s4);margin:0 0 var(--s5)}
+.navbar .tabs{margin:0}
+.back{font-size:var(--f2);font-weight:700;text-decoration:none}
+/* 注記（短い見出し＋1〜2行） */
+.notes{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.notes li{font-size:var(--f2);color:var(--label);padding-left:var(--s3);border-left:3px solid var(--g200)}
+.notes li b{color:var(--text)}
+.notes li.dec{border-left-color:var(--key)}
+.notes li.need{border-left-color:var(--error)}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.tag.dec{background:var(--key-50);color:var(--key)}
+.tag.need{background:var(--error);color:#fff}
+.tag.kentou{background:#fff;color:var(--error);border:1px solid var(--error);padding:0 5px}
+details.more{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s5);margin-top:var(--s3)}
+details.more summary{cursor:pointer;font-weight:700;color:var(--key)}
+.foot{margin-top:var(--s7);padding-top:var(--s4);border-top:1px solid var(--line);font-size:var(--f1);color:var(--label)}
+.foot p{margin:0 0 var(--s1)}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+figcaption{font-size:var(--f1);color:var(--label);margin-top:var(--s1)}
+@media screen and (max-width:760px){
+  .wrap{padding:var(--s5) var(--s4) var(--s6)}
+  .top h1{font-size:24px}
+  .kpi .v{font-size:28px}
+}
+
+@page{size:297mm 210mm;margin:9mm}
+.c-cover{background:var(--g200)} .c-intro,.c-info,.c-serial,.c-feature{background:#fff}
+.c-shop{background:var(--key-200)}
+.c-ad{background-color:var(--sub);background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.18) 0 2px,transparent 2px 9px)}
+.c-tbd{background:#fff;outline:2px dashed var(--g536);outline-offset:-4px}
+.sw{display:inline-block;width:14px;height:14px;border:1px solid var(--g536);border-radius:3px;vertical-align:-2px;margin-right:6px;font-style:normal}
+/* 1段目：大きな数字 */
+.kpis{margin-bottom:var(--s2)}
+/* 全体図 */
+.overview{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s4) var(--s3)}
+.mini .mn{display:block;font-size:var(--f1);font-weight:700;color:var(--label);margin-bottom:var(--s1);text-decoration:none}
+.mini .mn:hover{color:var(--key)}
+.mpair{display:flex;border:1px solid var(--g700);background:var(--g700);gap:1px}
+.mpg{position:relative;flex:1;aspect-ratio:182/257;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px 3px 18px}
+.mpg.span{aspect-ratio:364/257;background-image:linear-gradient(90deg,transparent calc(50% - .5px),rgba(0,0,0,.35) calc(50% - .5px),rgba(0,0,0,.35) calc(50% + .5px),transparent calc(50% + .5px))}
+.mp{position:absolute;top:4px;font-size:11px;font-weight:700;line-height:1.2;padding:0 2px}
+.mp.l{left:4px}.mp.r{right:4px}
+.mp.nf,.pno.nf{outline:1.5px dashed currentColor;outline-offset:1px;border-radius:2px}
+.mk{font-size:12px;font-weight:700;line-height:1.35;word-break:auto-phrase}
+.mc{position:absolute;bottom:4px;left:0;right:0;font-size:10px;line-height:1.2;opacity:.85}
+.mm{position:absolute;top:22px;right:4px;display:flex;flex-direction:column;gap:2px}
+.mi{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#fff;border:1px solid}
+.mi svg{width:10px;height:10px}
+.mi.q{background:var(--error);border-color:var(--error);color:#fff}
+.mi.kentou{color:var(--error);border-color:var(--error)}
+.mi.wait{color:var(--g700);border-color:var(--g700)}
+.legend{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s5);margin-top:var(--s4);font-size:var(--f1)}
+.legend span{display:inline-flex;align-items:center}
+.legend b{margin-right:4px}
+.legend .ex{color:var(--label)}
+.legend2{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-top:var(--s2);font-size:var(--f1);align-items:center}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s1);margin-top:var(--s4);font-size:var(--f1)}
+.fl{display:inline-flex;align-items:center;white-space:nowrap}
+.fl b{margin-right:3px}
+.fl .sw{width:10px;height:10px;margin-right:4px}
+.arr{color:var(--g536)}
+.explain{margin:var(--s3) 0 0;font-size:var(--f1);color:var(--label)}
+/* 前提と数 */
+.two{display:grid;grid-template-columns:3fr 2fr;gap:var(--s4);align-items:start}
+.tbl td.src{font-size:var(--f1);color:var(--label);width:24%;word-break:auto-phrase}
+.tw{padding:0;overflow-x:auto}
+/* 見開きごとの中身 */
+.sps{display:grid;gap:var(--s4)}
+.sp{scroll-margin-top:16px}
+.sp-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s1) var(--s3);margin-bottom:var(--s3)}
+.sp-no{font-weight:700;font-size:var(--f3)}
+.sp-pg{font-weight:700;font-size:var(--f3);color:var(--key)}
+.sp-head{font-size:var(--f2);color:var(--label)}
+.sp-src{margin-left:auto;font-size:var(--f1);color:var(--label);border:1px solid var(--line);border-radius:10px;padding:0 8px}
+.sp-body{display:grid;grid-template-columns:auto 1fr;gap:var(--s5);align-items:start}
+.dir{font-size:var(--f1);color:var(--label);margin-bottom:var(--s1)}
+.pair{display:flex;border:1px solid var(--g700);background:var(--g700);gap:1px;width:max-content}
+.pg{position:relative;width:144px;aspect-ratio:182/257;padding:26px 9px 10px;display:flex;flex-direction:column;gap:3px}
+.pg.span{width:289px;aspect-ratio:364/257;padding:26px 16px 12px;justify-content:center;background-image:linear-gradient(90deg,transparent calc(50% - .5px),rgba(0,0,0,.3) calc(50% - .5px),rgba(0,0,0,.3) calc(50% + .5px),transparent calc(50% + .5px))}
+.span-in{background:#fff;color:var(--text);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
+.pno{position:absolute;top:7px;font-weight:700;font-size:var(--f2);line-height:1.2;padding:0 2px}
+.pg.left .pno,.pno.l{left:8px} .pg.right .pno,.pno.r{right:8px}
+.alias{font-size:10px;opacity:.85}
+.cat{font-size:10px;font-weight:700;letter-spacing:.04em;opacity:.85}
+.ttl{font-size:13px;font-weight:700;line-height:1.45;word-break:auto-phrase}
+.psub{font-size:11px;line-height:1.5;word-break:auto-phrase;opacity:.9}
+.chips{display:flex;flex-wrap:wrap;gap:3px;margin-top:auto;padding-top:4px}
+.pg.span .chips{margin-top:4px}
+/* 確認事項（一覧表） */
+.qtbl{min-width:720px}
+.qtbl thead th{white-space:nowrap}
+.qtbl tbody th{white-space:normal;font-size:var(--f2)}
+.qtbl td.muted{font-size:var(--f1)}
+.nowrap{white-space:nowrap}
+.qtbl tr{scroll-margin-top:16px}
+.qtbl tr:target{background:var(--key-50)}
+.bar{border:1px solid rgba(0,0,0,.28);height:10px}
+@media screen and (max-width:900px){.two{grid-template-columns:1fr}}
+@media screen and (max-width:760px){
+  .tbl th,.tbl td{padding:6px 8px}
+  .overview{grid-template-columns:repeat(2,1fr)}
+  .sp-body{grid-template-columns:1fr}
+  .pg{width:min(144px,calc((100vw - 88px)/2))}
+  .pg.span{width:min(289px,calc(100vw - 86px))}
+}
+@media print{
+  body{background:#fff} .wrap{max-width:none;padding:0}
+  .top{margin-bottom:var(--s3)} .top h1{font-size:24px}
+  .kpi .v{font-size:22px} .kpi{padding:5px 10px} .kpi .d{line-height:1.4}
+  .top{padding-bottom:8px} .sec p{margin-top:0}
+  .sec{margin:var(--s4) 0 var(--s2)}
+  .overview{grid-template-columns:repeat(5,1fr);gap:4px 10px;max-width:212mm}
+  .legend{margin-top:8px} .explain{margin-top:6px} .flow{margin-top:8px}
+  .two{grid-template-columns:3fr 2fr;gap:10px} .tbl{font-size:11.5px} .tbl th,.tbl td{padding:5px 8px}
+  .kpis{grid-template-columns:repeat(5,1fr)}
+  .mk{font-size:10.5px} .mc{font-size:9px}
+  .p-sum{break-before:page} .p-sps{break-before:page} .p-open{break-before:page}
+  .sps{grid-template-columns:1fr 1fr;gap:10px}
+  .sp{padding:10px 12px;break-inside:avoid}
+  .sp-body{grid-template-columns:auto 1fr;gap:12px}
+  .pg{width:118px} .pg.span{width:237px}
+  .notes li{font-size:11.5px}
+  .overview,.flow,.qtbl tr,.kpis{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style></head><body><div class="wrap">
+<header class="top"><div><p class="eyebrow">らへん モック号</p><h1>台割（見開き）</h1><p class="sub">20ページ・B5・中綴じ・右綴じ｜ページは表紙を1として数える</p></div><dl class="meta"><dt>状態</dt><dd>たたき台（公開用・一部伏せ字）</dd><dt>更新</dt><dd>2026-09-27</dd><dt>もとにした資料</dt><dd>Canvaのたたき台・Notion</dd><dt>判型</dt><dd>B5（182×257mm）</dd></dl></header>
+
+<div class="kpis"><div class="kpi"><span class="k">総ページ数</span><span class="v">20<small>P</small></span><span class="d">表紙まわり4P＋本文16P・B5・右綴じ</span></div><div class="kpi"><span class="k">広告</span><span class="v">4<small>P</small></span><span class="d">全体の20%（P2・P18–P20）</span></div><div class="kpi hl"><span class="k">確認したいこと</span><span class="v"><a href="#open">2</a><small>件</small></span><span class="d">P14 地域情報の中身・奥付の置き場所</span></div><div class="kpi"><span class="k">要検討</span><span class="v">0<small>件</small></span><span class="d">いまは無し</span></div><div class="kpi"><span class="k">取材待ち</span><span class="v">3<small>本</small></span><span class="d">mitsuami・マーケットレポート・企業の取材</span></div></div>
+
+<div class="sec"><span class="no">01</span><h2>全体図（見開き10面）</h2><p>右綴じなので、見開きは右のページが先。ただし01（外側）だけは、表紙P1が左・裏表紙P20が右。見開きの番号を押すと、下の説明に移る。</p></div>
+<div class="overview"><div class="mini"><a class="mn" href="#s01">見開き 01</a><div class="mpair"><div class="mpg c-cover"><span class="mp l nf">P1</span><span class="mk">表紙</span><span class="mc">表紙</span><span class="mm"></span></div><div class="mpg c-ad"><span class="mp r nf">P20</span><span class="mk">広告</span><span class="mc">広告</span><span class="mm"></span></div></div></div><div class="mini"><a class="mn" href="#s02">見開き 02</a><div class="mpair"><div class="mpg c-intro"><span class="mp l">P3</span><span class="mk">発刊・目次</span><span class="mc">巻頭</span><span class="mm"></span></div><div class="mpg c-ad"><span class="mp r">P2</span><span class="mk">広告</span><span class="mc">広告</span><span class="mm"></span></div></div></div><div class="mini"><a class="mn" href="#s03">見開き 03</a><div class="mpair"><div class="mpg span c-intro"><span class="mp l">P5</span><span class="mp r">P4</span><span class="mk">あいさつ・編集部</span><span class="mc">巻頭</span><span class="mm"></span></div></div></div><div class="mini"><a class="mn" href="#s04">見開き 04</a><div class="mpair"><div class="mpg span c-shop"><span class="mp l">P7</span><span class="mp r">P6</span><span class="mk">アンポン</span><span class="mc">お店の記事</span><span class="mm"></span></div></div></div><div class="mini"><a class="mn" href="#s05">見開き 05</a><div class="mpair"><div class="mpg span c-shop"><span class="mp l">P9</span><span class="mp r">P8</span><span class="mk">passage 6-102</span><span class="mc">お店の記事</span><span class="mm"></span></div></div></div><div class="mini"><a class="mn" href="#s06">見開き 06</a><div class="mpair"><div class="mpg span c-shop"><span class="mp l">P11</span><span class="mp r">P10</span><span class="mk">mitsuami</span><span class="mc">お店の記事</span><span class="mm"><span class="mi wait" role="img" title="取材は11月" aria-label="取材は11月"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></span></div></div></div><div class="mini"><a class="mn" href="#s07">見開き 07</a><div class="mpair"><div class="mpg c-serial"><span class="mp l">P13</span><span class="mk">職人コラム</span><span class="mc">連載・コラム</span><span class="mm"></span></div><div class="mpg c-info"><span class="mp r">P12</span><span class="mk">マーケット<br>レポート</span><span class="mc">情報・レポート</span><span class="mm"><span class="mi wait" role="img" title="当日取材（11/3）" aria-label="当日取材（11/3）"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></span></div></div></div><div class="mini"><a class="mn" href="#s08">見開き 08</a><div class="mpair"><div class="mpg c-serial"><span class="mp l">P15</span><span class="mk">社員メシ・<br>おうちゴハン</span><span class="mc">連載・コラム</span><span class="mm"></span></div><div class="mpg c-info"><span class="mp r">P14</span><span class="mk">地域情報</span><span class="mc">情報・レポート</span><span class="mm"><span class="mi q" role="img" title="要確認 1" aria-label="要確認 1"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.4v4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9.4" r="1.1" fill="currentColor"/></svg></span></span></div></div></div><div class="mini"><a class="mn" href="#s09">見開き 09</a><div class="mpair"><div class="mpg span c-feature"><span class="mp l">P17</span><span class="mp r">P16</span><span class="mk">企業の取材</span><span class="mc">取材記事</span><span class="mm"><span class="mi wait" role="img" title="取材の時期は未定" aria-label="取材の時期は未定"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></span></div></div></div><div class="mini"><a class="mn" href="#s10">見開き 10</a><div class="mpair"><div class="mpg c-ad"><span class="mp l">P19</span><span class="mk">広告</span><span class="mc">広告</span><span class="mm"></span></div><div class="mpg c-ad"><span class="mp r">P18</span><span class="mk">広告</span><span class="mc">広告</span><span class="mm"></span></div></div></div></div>
+<div class="legend"><span><i class="sw c-cover"></i><b>表紙</b><span class="ex">灰</span></span><span><i class="sw c-ad"></i><b>広告</b><span class="ex">黄＋斜線</span></span><span><i class="sw c-shop"></i><b>お店の記事</b><span class="ex">淡い青。この号の中心</span></span><span><i class="sw c-intro"></i><b>そのほかの記事</b><span class="ex">白（巻頭・情報・連載・取材）。ページに種類名を書いている</span></span></div>
+<div class="legend2"><b>印：</b><span class="st q"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.4v4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9.4" r="1.1" fill="currentColor"/></svg>要確認</span><span class="st kentou"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.1 4.4a1.9 1.9 0 1 1 2.6 1.8c-.5.2-.7.6-.7 1.1v.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="9.6" r="1" fill="currentColor"/></svg>要検討</span><span class="st wait"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>取材待ち</span><span class="muted">（全体図には、対応が要る印だけを記号で出している）</span></div>
+<p class="explain">点線で囲んだ番号（P1・P20）は、誌面にページ番号を載せない。P10–P11 が冊子のちょうど真ん中。印刷の呼び方では、P1＝表1、P2＝表2、P19＝表3、P20＝表4。</p>
+<div class="flow"><b>読む順：</b><span class="fl"><i class="sw c-cover"></i><b>P1</b>表紙</span><span class="arr">→</span><span class="fl"><i class="sw c-ad"></i><b>P2</b>広告</span><span class="arr">→</span><span class="fl"><i class="sw c-intro"></i><b>P3</b>発刊・目次</span><span class="arr">→</span><span class="fl"><i class="sw c-intro"></i><b>P4–P5</b>あいさつ・編集部</span><span class="arr">→</span><span class="fl"><i class="sw c-shop"></i><b>P6–P7</b>アンポン</span><span class="arr">→</span><span class="fl"><i class="sw c-shop"></i><b>P8–P9</b>passage 6-102</span><span class="arr">→</span><span class="fl"><i class="sw c-shop"></i><b>P10–P11</b>mitsuami</span><span class="arr">→</span><span class="fl"><i class="sw c-info"></i><b>P12</b>マーケットレポート</span><span class="arr">→</span><span class="fl"><i class="sw c-serial"></i><b>P13</b>職人コラム</span><span class="arr">→</span><span class="fl"><i class="sw c-info"></i><b>P14</b>地域情報</span><span class="arr">→</span><span class="fl"><i class="sw c-serial"></i><b>P15</b>社員メシ・おうちゴハン</span><span class="arr">→</span><span class="fl"><i class="sw c-feature"></i><b>P16–P17</b>企業の取材</span><span class="arr">→</span><span class="fl"><i class="sw c-ad"></i><b>P18</b>広告</span><span class="arr">→</span><span class="fl"><i class="sw c-ad"></i><b>P19</b>広告</span><span class="arr">→</span><span class="fl"><i class="sw c-ad"></i><b>P20</b>広告</span></div>
+
+<section class="p-sum"><div class="sec"><span class="no">02</span><h2>前提と決まったこと</h2></div>
+<div class="two"><div class="card tw"><table class="tbl"><thead><tr><th>項目</th><th>内容</th><th>決めた日・出どころ</th></tr></thead><tbody><tr><th>総ページ数</th><td>20P（表紙まわり4P＋本文16P）</td><td class="src">2026-09-27 決定</td></tr><tr><th>ページの数え方</th><td>表紙を1として P1〜P20。表紙（P1）と裏表紙（P20）には、ページ番号を載せない</td><td class="src">2026-09-27 決定</td></tr><tr><th>判型</th><td>B5（182×257mm）</td><td class="src">2026-09-26 決定</td></tr><tr><th>綴じ方</th><td>中綴じ・右綴じ</td><td class="src">印刷見積の前提・Canvaのページの並び</td></tr><tr><th>P2の広告</th><td>Canvaの「背表紙広告」は、P2（表紙の裏）の広告として扱う</td><td class="src">中綴じには背がないため（違っていたら直す）</td></tr><tr><th>3店の並び</th><td>アンポン → passage → mitsuami（P6〜P11）</td><td class="src">2026-09-27 決定</td></tr><tr><th>P12</th><td>団地バトンマーケット（11/3）の開催レポート（レビュー記事）</td><td class="src">2026-09-27 決定（mitsuamiの取材が11月で、モックは11/3に間に合わないため）</td></tr><tr><th>P16–P17</th><td>企業の取材記事</td><td class="src">2026-09-27 決定</td></tr><tr><th>編集部紹介</th><td>P4–P5（あいさつの見開き）に一緒に入れる</td><td class="src">2026-09-27 決定</td></tr><tr><th>連載（P13・P15）</th><td>書き手がモック完成までに見つからなければ、別の中身（広告や別の記事）に替える</td><td class="src">2026-09-27 決定</td></tr><tr><th>広告</th><td>4P（P2・P18・P19・P20）。お試し広告と協賛企業の分を入れ、決まらない枠は仮のイメージ</td><td class="src">2026-09-27 決定（9/22 MTGの方針どおり）</td></tr><tr><th>もとにしたもの</th><td>Canvaのたたき台（10見開き・A4横＝A5の見開きで作成）と、Notionの決定事項（〜9/26）</td><td class="src"></td></tr></tbody></table></div>
+<div><div class="card tw"><table class="tbl"><thead><tr><th>種類</th><th class="num">ページ</th><th></th><th>どこ</th></tr></thead><tbody><tr><th><i class="sw c-cover"></i>表紙</th><td class="num">1P</td><td style="width:34%"><span class="bar c-cover" style="width:17%"></span></td><td>P1</td></tr><tr><th><i class="sw c-intro"></i>巻頭</th><td class="num">3P</td><td style="width:34%"><span class="bar c-intro" style="width:50%"></span></td><td>P3–P5</td></tr><tr><th><i class="sw c-shop"></i>お店の記事</th><td class="num">6P</td><td style="width:34%"><span class="bar c-shop" style="width:100%"></span></td><td>P6–P11</td></tr><tr><th><i class="sw c-info"></i>情報・レポート</th><td class="num">2P</td><td style="width:34%"><span class="bar c-info" style="width:33%"></span></td><td>P12・P14</td></tr><tr><th><i class="sw c-serial"></i>連載・コラム</th><td class="num">2P</td><td style="width:34%"><span class="bar c-serial" style="width:33%"></span></td><td>P13・P15</td></tr><tr><th><i class="sw c-feature"></i>取材記事</th><td class="num">2P</td><td style="width:34%"><span class="bar c-feature" style="width:33%"></span></td><td>P16–P17</td></tr><tr><th><i class="sw c-ad"></i>広告</th><td class="num">4P</td><td style="width:34%"><span class="bar c-ad" style="width:67%"></span></td><td>P2・P18–P20</td></tr>
+<tr><th>合計</th><td class="num">20P</td><td></td><td></td></tr></tbody></table></div>
+<p class="explain">印刷見積は B5・20P で取り直した（2026-09-27・グラフィック／ラクスル）。→ <a href="../estimate/">別紙「印刷見積（B5・20P・中綴じ）」</a></p></div></div></section>
+
+<section class="p-sps"><div class="sec"><span class="no">03</span><h2>見開きごとの中身</h2></div>
+<div class="legend2" style="margin:0 0 var(--s3)"><b>素材の状況：</b><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>素材がある</span><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>仮の文章・見本</span><span class="st wait"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>取材待ち</span><span class="st add"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M2.5 6h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>新しく足す</span><span class="st q"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.4v4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9.4" r="1.1" fill="currentColor"/></svg>要確認（番号＝確認したいこと）</span><span class="st kentou"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.1 4.4a1.9 1.9 0 1 1 2.6 1.8c-.5.2-.7.6-.7 1.1v.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="9.6" r="1" fill="currentColor"/></svg>要検討</span></div>
+<div class="sps"><article class="sp card" id="s01"><header class="sp-h"><span class="sp-no">見開き 01</span><span class="sp-pg">P1・P20</span><span class="sp-head">外側（表紙と裏表紙）</span><span class="sp-src">Canva 1枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">外側（閉じたときの表と裏）</div><div class="pair"><div class="pg left c-cover"><div class="pno nf">P1</div><div class="alias">表1・番号は載せない</div><div class="cat">表紙</div><div class="ttl">表紙</div><div class="psub">型を検討中（5型×明朝／ゴシック・B5で作成済み）</div><div class="chips"><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>型あり</span></div></div><div class="pg right c-ad"><div class="pno nf">P20</div><div class="alias">表4・番号は載せない</div><div class="cat">広告</div><div class="ttl">裏表紙の広告</div><div class="psub">1ページ</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>仮</span></div></div></div></div><ul class="notes"><li class="">平らに広げると、表紙（P1）が左、裏表紙（P20）が右になる（右綴じ）</li><li class="dec"><span class="tag dec">決定</span>ページは表紙を1として数える。表紙（P1）と裏表紙（P20）には、ページ番号を載せない（2026-09-27 決定）</li><li class="">表紙は「表紙の型」で別に検討中。9/22 MTGの方向：誌名は上部／TAKE FREEを明示／食べ物の写真を前面に</li><li class="">表紙の仮写真は passage 6-102 の料理。最初のお店の記事はアンポンなので、表紙の写真の店をどうするかは表紙の検討で決める</li><li class="">Canvaの表紙は「11 2026」「NO.0」。モックの完成目標が年内になったので、発行月と号数は表紙の検討で決め直す（表紙の型では「NO. 0」「2026 WINTER」を仮置き）</li></ul></div></article><article class="sp card" id="s02"><header class="sp-h"><span class="sp-no">見開き 02</span><span class="sp-pg">P2・P3</span><span class="sp-head">表紙をめくったところ</span><span class="sp-src">Canva 2枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg left c-intro"><div class="pno">P3</div><div class="cat">巻頭</div><div class="ttl">発刊のことば・ミッション・目次</div><div class="psub">ミッション「街を好きになる、きっかけをつくる」</div><div class="chips"><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>文章あり</span></div></div><div class="pg right c-ad"><div class="pno">P2</div><div class="alias">表2</div><div class="cat">広告</div><div class="ttl">表紙の裏の広告</div><div class="psub">1ページ。Canvaでは「背表紙広告」と書かれている</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>仮</span></div></div></div></div><ul class="notes"><li class="">発刊のことばとミッションの文章はCanvaにある。目次は見出しだけなので、この台割のページ番号で作る</li><li class="">「背表紙広告」は、P2（表紙の裏）の広告として扱っている。中綴じには背がないので、おそらくその意味（違っていたら直す）</li></ul></div></article><article class="sp card" id="s03"><header class="sp-h"><span class="sp-no">見開き 03</span><span class="sp-pg">P4–P5</span><span class="sp-head">巻頭</span><span class="sp-src">Canva 3枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg span c-intro"><div class="pno l">P5</div><div class="pno r">P4</div><div class="span-in"><div class="cat">巻頭・見開き</div><div class="ttl">編集長あいさつ＋編集部紹介</div><div class="psub">あいさつは縦組みの見開き。編集部の紹介（写真つき）を足す</div><div class="chips"><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>あいさつ文あり</span><span class="st add"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M2.5 6h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>編集部紹介</span></div></div></div></div></div><ul class="notes"><li class="dec"><span class="tag dec">決定</span>9/22 MTGで「編集長あいさつ・編集部紹介」のページを入れると決定。記事ネタ帳では、モック号の巻頭ページとして想定（採用）。Canvaにはまだ編集部紹介がない</li><li class="dec"><span class="tag dec">決定</span>編集部紹介はこの見開きに一緒に入れる（2026-09-27 決定）。B5は面積がA5の約1.5倍で、同じ文字サイズなら約3分の1が空くので、そこに入る見込み（おそらく）。入りきらなければ、あいさつ文を短くする</li></ul></div></article><article class="sp card" id="s04"><header class="sp-h"><span class="sp-no">見開き 04</span><span class="sp-pg">P6–P7</span><span class="sp-head">お店の記事 1</span><span class="sp-src">Canva 5枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg span c-shop"><div class="pno l">P7</div><div class="pno r">P6</div><div class="span-in"><div class="cat">お店の記事・見開き</div><div class="ttl">お店① アンポン bake&amp;drip（中神）</div><div class="psub">位置づけ：「繋がる場所」として始まり、passage・フリマ主催・本誌発刊へ広がる起点</div><div class="chips"><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>本文あり</span><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>写真あり</span></div></div></div></div></div><ul class="notes"><li class="dec"><span class="tag dec">決定</span>3店共通：お店の記事に必ず入れるもの（8/15決定）＝推しメニュー／店主の人柄・背景／オープンまでのストーリー。『海の近く』と同じ形にせず、らへん独自のミニマルな形にする（9/11の編集長コメント・9/22 MTGのタスク）</li><li class="dec"><span class="tag dec">決定</span>3店の並びは「起点」から広がる順（アンポン → passage → mitsuami）にした（2026-09-27 決定）。Canvaでは5枚目</li><li class="">本文・写真・キャラクター・店舗情報まで、Canvaに入っている</li></ul></div></article><article class="sp card" id="s05"><header class="sp-h"><span class="sp-no">見開き 05</span><span class="sp-pg">P8–P9</span><span class="sp-head">お店の記事 2</span><span class="sp-src">Canva 4枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg span c-shop"><div class="pno l">P9</div><div class="pno r">P8</div><div class="span-in"><div class="cat">お店の記事・見開き</div><div class="ttl">お店② passage 6-102（昭島）</div><div class="psub">位置づけ：バトンマーケット主催・現地代表</div><div class="chips"><span class="st ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>写真あり</span><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>本文は仮</span></div></div></div></div></div><ul class="notes"><li class="dec"><span class="tag dec">決定</span>3店共通：お店の記事に必ず入れるもの（8/15決定）＝推しメニュー／店主の人柄・背景／オープンまでのストーリー。『海の近く』と同じ形にせず、らへん独自のミニマルな形にする（9/11の編集長コメント・9/22 MTGのタスク）</li><li class="">Canvaでは4枚目（並び替えで2本目に）</li><li class="">Canvaの本文は同じ段落の繰り返し（仮）。店舗情報の枠はある</li></ul></div></article><article class="sp card" id="s06"><header class="sp-h"><span class="sp-no">見開き 06</span><span class="sp-pg">P10–P11</span><span class="sp-head">お店の記事 3</span><span class="sp-src">Canva 6枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg span c-shop"><div class="pno l">P11</div><div class="pno r">P10</div><div class="span-in"><div class="cat">お店の記事・見開き</div><div class="ttl">お店③ mitsuami（東中神）</div><div class="psub">位置づけ：unpont 外の飲食店代表</div><div class="chips"><span class="st wait"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>取材は11月</span></div></div></div></div></div><ul class="notes"><li class="dec"><span class="tag dec">決定</span>3店共通：お店の記事に必ず入れるもの（8/15決定）＝推しメニュー／店主の人柄・背景／オープンまでのストーリー。『海の近く』と同じ形にせず、らへん独自のミニマルな形にする（9/11の編集長コメント・9/22 MTGのタスク）</li><li class="">取材は11月中に3人で行く予定（9/22 MTG）。料理・店主・作っているところを撮る</li><li class="">Canvaは見出しと店舗情報の枠だけ。料金の欄にアンポンの文面が残っている</li><li class="">P10–P11は冊子のちょうど真ん中で、左右が1枚の紙でつながる。左右にまたがる写真がずれにくいのは、この見開きだけ（ほかの見開きは左右が別の紙）</li></ul></div></article><article class="sp card" id="s07"><header class="sp-h"><span class="sp-no">見開き 07</span><span class="sp-pg">P12・P13</span><span class="sp-head">レポートと連載</span><span class="sp-src">Canva 7枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg left c-serial"><div class="pno">P13</div><div class="cat">連載・コラム</div><div class="ttl">愛すべき職人 weirdo no.01「音響の探究」</div><div class="psub">連載の候補：音響の仕事をしている方のコラム</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>本文は仮</span></div></div><div class="pg right c-info"><div class="pno">P12</div><div class="cat">情報・レポート</div><div class="ttl">団地バトンマーケット 第2回の開催レポート</div><div class="psub">11/3開催・主催 passage 6-102。当日の様子を取材して、レビュー記事にする</div><div class="chips"><span class="st wait"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>当日取材（11/3）</span></div></div></div></div><ul class="notes"><li class="dec"><span class="tag dec">決定</span>P12は、11/3の開催レポート（レビュー記事）にする（2026-09-27 決定）。mitsuamiの取材が11月なので、モックは11/3のマーケットに間に合わないため</li><li class="">11/3当日に、撮影と取材をする人が必要</li><li class="">Canvaのたたき台のP12は、開催前の告知（主催・日時・会場）のまま</li><li class="">職人のコラムは、記事ネタ帳の「音響の人のコラム・おうちごはんレシピ」（検討中）にあたる</li><li class="">連載は、書けそうな人がいればモック号にも寄稿してもらう方針（9/22 MTG）</li><li class="dec"><span class="tag dec">決定</span>書き手がモック完成までに見つからない場合は、別の中身（広告や別の記事）に替える（2026-09-27 決定）</li></ul></div></article><article class="sp card" id="s08"><header class="sp-h"><span class="sp-no">見開き 08</span><span class="sp-pg">P14・P15</span><span class="sp-head">情報と連載</span><span class="sp-src">Canva 8枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg left c-serial"><div class="pno">P15</div><div class="cat">連載・コラム</div><div class="ttl">あの企業の社員メシ＋あの人のおうちゴハン</div><div class="psub">連載の候補：企業の社員メシ／おうちごはんレシピ</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>テンプレの見本</span></div></div><div class="pg right c-info"><div class="pno">P14</div><div class="cat">情報・レポート</div><div class="ttl">東京日和・LOCAL INFORMATION</div><div class="psub">地域の情報。何を載せるかは未定</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>テンプレの見本</span><a class="st q" href="#q1"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.4v4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9.4" r="1.1" fill="currentColor"/></svg>要確認 1</a></div></div></div></div><ul class="notes"><li class="need"><span class="tag need">要確認</span>どちらも、Canvaテンプレートの見本の文章のまま（P14 → <a href="#q1">確認したいこと 1</a>）</li><li class="dec"><span class="tag dec">決定</span>P15も、書き手がモック完成までに見つからない場合は、別の中身（広告や別の記事）に替える（2026-09-27 決定）</li><li class="">社員メシ：協賛企業が決まったら、その会社の社員におすすめの店や料理を聞いて紹介する案（記事ネタ帳・アイデア）</li><li class="">おうちごはんレシピ：音響の仕事をしている方に、レシピを提供してもらうコラボを打診する予定（記事ネタ帳・検討中）</li></ul></div></article><article class="sp card" id="s09"><header class="sp-h"><span class="sp-no">見開き 09</span><span class="sp-pg">P16–P17</span><span class="sp-head">取材記事</span><span class="sp-src">Canva 9枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg span c-feature"><div class="pno l">P17</div><div class="pno r">P16</div><div class="span-in"><div class="cat">取材記事・見開き</div><div class="ttl">企業の取材記事</div><div class="psub">ローカル振興への考えを取材する</div><div class="chips"><span class="st wait"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 3.6V6l1.7 1.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>取材の時期は未定</span></div></div></div></div></div><ul class="notes"><li class="dec"><span class="tag dec">決定</span>P16–P17 は企業の取材記事にする（2026-09-27 決定）。Canvaの「スペシャル対談」の見本と入れ替える（企業対談は創刊号へ回すと決まっているため・9/11）</li><li class="">Notionの記事・連載案にある、企業の取材の案をもとにした</li><li class="">取材先の企業名などは、この公開用の版では伏せている</li></ul></div></article><article class="sp card" id="s10"><header class="sp-h"><span class="sp-no">見開き 10</span><span class="sp-pg">P18・P19</span><span class="sp-head">裏表紙の手前</span><span class="sp-src">Canva 10枚目</span></header><div class="sp-body"><div class="sp-vis"><div class="dir">← 読む順（右ページが先）</div><div class="pair"><div class="pg left c-ad"><div class="pno">P19</div><div class="alias">表3</div><div class="cat">広告</div><div class="ttl">広告（小さい枠の組み合わせ）</div><div class="psub">1/2・1/4・1/8・1/16・1/32</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>仮</span></div></div><div class="pg right c-ad"><div class="pno">P18</div><div class="cat">広告</div><div class="ttl">広告</div><div class="psub">1ページ</div><div class="chips"><span class="st tmp"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>仮</span></div></div></div></div><ul class="notes"><li class="">Canvaの10枚目は、広告枠の大きさの見本（料金入り）。料金はこの台割には載せていない</li><li class="need"><span class="tag need">要確認</span>奥付（発行元・発行日・号数・問い合わせ先）を置く場所が、まだない → <a href="#q2">確認したいこと 2</a></li></ul></div></article></div></section>
+
+<section class="p-open" id="open"><div class="sec"><span class="no">04</span><h2>確認したいこと・要検討</h2><p>要確認＝台割を完成させるために決めること。要検討＝台割には載せたまま、あとで決めること。いま、要検討のものは無い。</p></div>
+<div class="card tw"><table class="tbl qtbl"><thead><tr><th class="num">番号</th><th>状態</th><th>決めること</th><th>関係するページ</th><th>補足</th></tr></thead>
+<tbody><tr id="q1"><td class="num">1</td><td><span class="st q"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.4v4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9.4" r="1.1" fill="currentColor"/></svg>要確認 1</span></td><th>P14 地域情報の中身</th><td class="nowrap"><a href="#s08">P14</a></td><td class="muted">Canvaはテンプレートの見本のまま。何を載せるか。観光地は基本掲載しない（8/15）点に注意。</td></tr><tr id="q2"><td class="num">2</td><td><span class="st q"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.4v4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9.4" r="1.1" fill="currentColor"/></svg>要確認 2</span></td><th>奥付の置き場所</th><td class="nowrap"><a href="#s10">P18–P19</a></td><td class="muted">発行元・発行日・号数・問い合わせ先。P19（裏表紙の裏）の一部（小さい枠を全部使うと、残りは1/32ページ分ほど）、P18の下（1ページ広告が1ページ未満になる）、P3など。</td></tr></tbody></table></div></section>
+
+<footer class="foot"><p>もとにしたもの：Canva「アンポン_A4＋全3mm（303*216）のコピー」の10見開き（A4横＝A5の見開き）／Notion「らへん」編集部（決めること・タスク・記事ネタ帳・編集会議・モックのコメント要約）。</p>
+<p>個人名・電話番号・メールアドレス・住所・広告料金は、この台割には載せていません。</p><p>この公開用の版では、取材先の企業名など、一部を伏せています。</p><p>デザインの考え方と配色は、デジタル庁「ダッシュボードデザインの実践ガイドブック」（2026年3月31日更新）をもとにした。</p></footer>
+</div></body></html>
