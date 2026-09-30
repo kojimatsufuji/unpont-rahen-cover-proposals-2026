@@ -1,23 +1,27 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>らへん 表紙の型 写真1：ガレットとカフェラテ（真俯瞰）</title><style>
-:root{--key:#0017C1;--key-1200:#000060;--key-600:#3460FB;--key-400:#7096F8;--key-200:#C5D7FB;--key-50:#D9E6FF;
+<title>らへん 表紙の型 写真1：ガレットとカフェラテ（真俯瞰）</title><style>@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap");
+:root{--key:#2A418C;--key-1200:#1C2C63;--key-600:#3A54A6;--key-400:#7F90C8;--key-200:#C3CDEA;--key-50:#E4E8F4;
 --sub:#FFC700;--sub-600:#D2A400;--sub-800:#A58000;
---g50:#F2F2F2;--g200:#CCCCCC;--g400:#999999;--g536:#767676;--g700:#4D4D4D;--g900:#1A1A1A;
---bg:#F8F8FB;--surface:#FFFFFF;--control:#F1F1F4;--text:#1A1A1A;--label:#626264;--link:#0017C1;
---success:#197A4B;--error:#CE0000;--line:#CCCCCC;
+--g50:#EDEAE3;--g200:#DDD9D0;--g400:#B9B4A9;--g536:#6F6B64;--g700:#43464E;--g900:#1C1E23;
+--bg:#F5F3EE;--surface:#FFFFFF;--control:#EDEAE3;--text:#1C1E23;--label:#63666E;--link:#2A418C;
+--success:#197A4B;--error:#B8361F;--line:#DDD9D0;
 --f1:12px;--f2:14px;--f3:16px;--f4:20px;--f5:28px;--f6:36px;
---s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--r:8px}
+--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--r:10px;
+--ease:cubic-bezier(.22,.8,.24,1);--num:"Outfit","Zen Kaku Gothic New","Hiragino Sans",sans-serif}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-font-size:var(--f2);line-height:1.7;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
-a{color:var(--link);text-underline-offset:2px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Zen Kaku Gothic New","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+font-size:var(--f2);line-height:1.75;letter-spacing:.01em;line-break:strict;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:var(--link);text-underline-offset:3px;transition:color .18s var(--ease)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--key);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-feature-settings:"palt" 1}
 .wrap{max-width:1180px;margin:0 auto;padding:var(--s6) var(--s5) var(--s7)}
 /* ページの見出しとメタ情報（左上に題名、右にいつ・何の資料か） */
-.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--s3) var(--s5);padding-bottom:var(--s4);border-bottom:2px solid var(--key);margin-bottom:var(--s5)}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--s3) var(--s5);padding-bottom:var(--s4);border-bottom:2px solid var(--text);margin-bottom:var(--s5)}
 .top>div{flex:1 1 520px;min-width:0} .top .meta{flex:none}
 .top .eyebrow{margin:0 0 var(--s1);font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
-.top h1{margin:0;font-size:var(--f5);line-height:1.35;font-weight:700;word-break:auto-phrase}
+.top h1{margin:0;font-size:var(--f5);line-height:1.35;font-weight:900;letter-spacing:-.01em;word-break:auto-phrase}
 .top .sub{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
 .nb{display:inline-block}
 .meta{display:grid;grid-template-columns:auto auto;gap:2px var(--s3);font-size:var(--f1);color:var(--label);margin:0}
@@ -25,17 +29,19 @@ a{color:var(--link);text-underline-offset:2px}
 /* 節の見出し（小さな番号＋見出し） */
 .sec{margin:var(--s7) 0 var(--s4)}
 .sec .no{display:block;font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
-.sec h2{margin:0;font-size:var(--f4);font-weight:700;color:var(--key);line-height:1.4}
+.sec h2{margin:0;font-size:var(--f4);font-weight:900;color:var(--text);line-height:1.4}
+.sec .no,.tno,.vn,.dn{font-family:var(--num);font-variant-numeric:tabular-nums}
 .sec p{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
 /* 区画 */
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4) var(--s5)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4) var(--s5);transition:border-color .5s var(--ease),box-shadow .5s var(--ease),transform .5s var(--ease)}
+a.card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -30px rgba(28,30,35,.45)}
 .card>h3{margin:0 0 var(--s2);font-size:var(--f3);font-weight:700}
 .muted{color:var(--label)}
 /* 大きな数字（強調は1つだけ .hl） */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s3)}
 .kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s4)}
 .kpi .k{display:block;font-size:var(--f1);font-weight:700;color:var(--label)}
-.kpi .v{display:block;font-size:var(--f6);font-weight:700;line-height:1.2;margin-top:var(--s1)}
+.kpi .v{display:block;font-family:var(--num);font-size:var(--f6);font-weight:600;line-height:1.2;margin-top:var(--s1)}
 .kpi .v small{font-size:var(--f3);font-weight:700;margin-left:2px}
 .kpi .d{display:block;font-size:var(--f1);color:var(--label);margin-top:2px;word-break:auto-phrase}
 .kpi.hl{background:var(--key);border-color:var(--key);color:#fff} .kpi.hl .k,.kpi.hl .d{color:#fff}
@@ -58,13 +64,15 @@ a{color:var(--link);text-underline-offset:2px}
 .st.kentou{color:var(--error);border-color:var(--error);border-width:1.5px}
 /* 切り替え（選んでいるものは塗り＋太字＋印） */
 .tabs{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0 0 var(--s5)}
-.tabs a,.tabs span{display:inline-block;padding:var(--s2) var(--s4);border-radius:var(--r);background:var(--surface);color:var(--text);text-decoration:none;font-size:var(--f2);border:1px solid var(--g536)}
-.tabs a:hover{border-color:var(--key)}
+.tabs a,.tabs span{display:inline-block;padding:var(--s2) var(--s4);border-radius:var(--r);background:var(--surface);color:var(--text);text-decoration:none;font-size:var(--f2);border:1px solid var(--g400);transition:border-color .18s var(--ease),color .18s var(--ease),transform .18s var(--ease)}
+.tabs a:hover{border-color:var(--key);color:var(--key)}
+.tabs a:active{transform:translateY(1px) scale(.98)}
 .tabs [aria-current]{background:var(--key);border-color:var(--key);color:#fff;font-weight:700}
 .tabs [aria-current]::before{content:"● ";font-size:10px;vertical-align:1px}
 .navbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s4);margin:0 0 var(--s5)}
 .navbar .tabs{margin:0}
-.back{font-size:var(--f2);font-weight:700;text-decoration:none}
+.back{font-size:var(--f2);font-weight:700;text-decoration:none;display:inline-block;transition:transform .18s var(--ease)}
+.back:hover{transform:translateX(-3px)}
 /* 注記（短い見出し＋1〜2行） */
 .notes{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
 .notes li{font-size:var(--f2);color:var(--label);padding-left:var(--s3);border-left:3px solid var(--g200)}
@@ -81,11 +89,30 @@ details.more summary{cursor:pointer;font-weight:700;color:var(--key)}
 .foot p{margin:0 0 var(--s1)}
 figure{margin:0}
 figure img{display:block;width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+figure a{display:block;overflow:hidden;border-radius:4px}
+figure a img,.wide a img{transition:transform .6s var(--ease)}
+figure a:hover img,.wide a:hover img{transform:scale(1.025)}
+.wide a{display:block;overflow:hidden;border-radius:4px}
 figcaption{font-size:var(--f1);color:var(--label);margin-top:var(--s1)}
 @media screen and (max-width:760px){
   .wrap{padding:var(--s5) var(--s4) var(--s6)}
   .top h1{font-size:24px}
   .kpi .v{font-size:28px}
+}
+/* 動き（js() と組み合わせる）。スクロールで順に出る・見出しがせり上がる */
+.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0ms)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js .top h1,.js .top .ph{animation:rh-rise .9s var(--ease) both}
+.js .top .ph{animation-delay:.12s}
+@keyframes rh-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}
+  .js [data-reveal]{opacity:1;transform:none}
+}
+@media print{
+  body::before{display:none}
+  .js [data-reveal]{opacity:1!important;transform:none!important}
+  *{animation:none!important;transition:none!important}
 }
 
 .ph{margin:2px 0 0;font-size:var(--f4);font-weight:700}
@@ -153,5 +180,15 @@ figure.base figcaption{color:var(--g536)}
 <li>キャッチ：確定済みの「このへんには、いいものがある。」を仮置き。号ごとの特集キャッチはこの位置に入る。</li>
 <li>号数・季節：編集長案の「NO. 0」＋仮の「2026 WINTER」。元案は「Vol.1」だったので正式な表記は要確認。</li><li>t4・t5 左上の説明文「東京の西らへんの／食のフリーペーパー」：確定済みの媒体の説明（食に特化した地域フリーペーパー）から書いた仮の文言。</li><li>四季色の帯：元案の色（#DAE1C8）のまま。季節ごとの4色は未定。</li></ul></details>
 
-<footer class="foot"><p>元データ：assets/edit/cover-type/（型のHTML・生成スクリプト）。書き出し：output/cover-type/（PNG・PDF）。</p><p>デザインの考え方と配色は、デジタル庁「ダッシュボードデザインの実践ガイドブック」（2026年3月31日更新）をもとにした。</p></footer>
-</div></body></html>
+<footer class="foot"><p>元データ：assets/edit/cover-type/（型のHTML・生成スクリプト）。書き出し：output/cover-type/（PNG・PDF）。</p><p>色の使い方（色は少なく・色だけに頼らない・強調は1つ）は、デジタル庁「ダッシュボードデザインの実践ガイドブック」（2026年3月31日更新）の考え方に沿っています。</p></footer>
+</div><script>(function(){var d=document,root=d.documentElement;root.classList.add("js");
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var sel=".navbar,.lead2>.card,.status,.sec,.toc,.type,.wide,.card.rec,.card.tw,details.more,.g>.vc,.foot";
+var els=[].slice.call(d.querySelectorAll(sel));
+els.forEach(function(el){el.setAttribute("data-reveal","");});
+[].slice.call(d.querySelectorAll(".g")).forEach(function(g){[].slice.call(g.children).forEach(function(c,i){c.style.setProperty("--d",(i%4)*80+"ms");});});
+[].slice.call(d.querySelectorAll(".lead2")).forEach(function(g){[].slice.call(g.children).forEach(function(c,i){c.style.setProperty("--d",i*90+"ms");});});
+if(reduce||!("IntersectionObserver" in window)){els.forEach(function(el){el.classList.add("in");});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{rootMargin:"0px 0px -6% 0px",threshold:0.06});
+els.forEach(function(el){io.observe(el);});
+addEventListener("beforeprint",function(){els.forEach(function(el){el.classList.add("in");});});})();</script></body></html>
