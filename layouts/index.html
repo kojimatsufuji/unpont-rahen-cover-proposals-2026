@@ -1,0 +1,186 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>らへん ゼロ号 全ページのレイアウト案</title><style>@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap");
+:root{--key:#2A418C;--key-1200:#1C2C63;--key-600:#3A54A6;--key-400:#7F90C8;--key-200:#C3CDEA;--key-50:#E4E8F4;
+--sub:#FFC700;--sub-600:#D2A400;--sub-800:#A58000;
+--g50:#EDEAE3;--g200:#DDD9D0;--g400:#B9B4A9;--g536:#6F6B64;--g700:#43464E;--g900:#1C1E23;
+--bg:#F5F3EE;--surface:#FFFFFF;--control:#EDEAE3;--text:#1C1E23;--label:#63666E;--link:#2A418C;
+--success:#197A4B;--error:#B8361F;--line:#DDD9D0;
+--f1:12px;--f2:14px;--f3:16px;--f4:20px;--f5:28px;--f6:36px;
+--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--r:10px;
+--ease:cubic-bezier(.22,.8,.24,1);--num:"Outfit","Zen Kaku Gothic New","Hiragino Sans",sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Zen Kaku Gothic New","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+font-size:var(--f2);line-height:1.75;letter-spacing:.01em;line-break:strict;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:var(--link);text-underline-offset:3px;transition:color .18s var(--ease)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--key);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-feature-settings:"palt" 1}
+.wrap{max-width:1180px;margin:0 auto;padding:var(--s6) var(--s5) var(--s7)}
+/* ページの見出しとメタ情報（左上に題名、右にいつ・何の資料か） */
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--s3) var(--s5);padding-bottom:var(--s4);border-bottom:2px solid var(--text);margin-bottom:var(--s5)}
+.top>div{flex:1 1 520px;min-width:0} .top .meta{flex:none}
+.top .eyebrow{margin:0 0 var(--s1);font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
+.top h1{margin:0;font-size:var(--f5);line-height:1.35;font-weight:900;letter-spacing:-.01em;word-break:auto-phrase}
+.top .sub{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
+.nb{display:inline-block}
+.meta{display:grid;grid-template-columns:auto auto;gap:2px var(--s3);font-size:var(--f1);color:var(--label);margin:0}
+.meta dt{font-weight:700} .meta dd{margin:0;color:var(--text)}
+/* 節の見出し（小さな番号＋見出し） */
+.sec{margin:var(--s7) 0 var(--s4)}
+.sec .no{display:block;font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.08em}
+.sec h2{margin:0;font-size:var(--f4);font-weight:900;color:var(--text);line-height:1.4}
+.sec .no,.tno,.vn,.dn{font-family:var(--num);font-variant-numeric:tabular-nums}
+.sec p{margin:var(--s1) 0 0;color:var(--label);font-size:var(--f2)}
+/* 区画 */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4) var(--s5);transition:border-color .5s var(--ease),box-shadow .5s var(--ease),transform .5s var(--ease)}
+a.card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -30px rgba(28,30,35,.45)}
+.card>h3{margin:0 0 var(--s2);font-size:var(--f3);font-weight:700}
+.muted{color:var(--label)}
+/* 大きな数字（強調は1つだけ .hl） */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s3)}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s4)}
+.kpi .k{display:block;font-size:var(--f1);font-weight:700;color:var(--label)}
+.kpi .v{display:block;font-family:var(--num);font-size:var(--f6);font-weight:600;line-height:1.2;margin-top:var(--s1)}
+.kpi .v small{font-size:var(--f3);font-weight:700;margin-left:2px}
+.kpi .d{display:block;font-size:var(--f1);color:var(--label);margin-top:2px;word-break:auto-phrase}
+.kpi.hl{background:var(--key);border-color:var(--key);color:#fff} .kpi.hl .k,.kpi.hl .d{color:#fff}
+.kpi a{color:inherit}
+/* 表 */
+.tbl{width:100%;border-collapse:collapse;background:var(--surface);font-size:var(--f2)}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:var(--s2) var(--s3);text-align:left;vertical-align:top}
+.tbl thead th{background:var(--key-50);font-size:var(--f1);font-weight:700;border-bottom:1px solid var(--key-200)}
+.tbl tbody th{font-weight:700;white-space:nowrap}
+.tbl .num{text-align:right;white-space:nowrap}
+.bar{display:inline-block;height:8px;background:var(--key);border-radius:2px;vertical-align:middle}
+/* 状態の印（記号＋文字。色は「要確認」「要検討」だけ強く使う） */
+.st{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;line-height:1.5;padding:0 6px 0 4px;border-radius:9px;border:1px solid;background:#fff;white-space:nowrap;text-decoration:none}
+.st svg{width:11px;height:11px;flex:none}
+.st.ok{color:var(--g700);border-color:var(--g700)}
+.st.tmp{color:var(--g700);border-color:var(--g536);border-style:dashed}
+.st.wait{color:var(--g700);border-color:var(--g700)}
+.st.add{color:var(--g700);border-color:var(--g536);border-style:dashed}
+.st.q{color:#fff;background:var(--error);border-color:var(--error)}
+.st.kentou{color:var(--error);border-color:var(--error);border-width:1.5px}
+/* 切り替え（選んでいるものは塗り＋太字＋印） */
+.tabs{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0 0 var(--s5)}
+.tabs a,.tabs span{display:inline-block;padding:var(--s2) var(--s4);border-radius:var(--r);background:var(--surface);color:var(--text);text-decoration:none;font-size:var(--f2);border:1px solid var(--g400);transition:border-color .18s var(--ease),color .18s var(--ease),transform .18s var(--ease)}
+.tabs a:hover{border-color:var(--key);color:var(--key)}
+.tabs a:active{transform:translateY(1px) scale(.98)}
+.tabs [aria-current]{background:var(--key);border-color:var(--key);color:#fff;font-weight:700}
+.tabs [aria-current]::before{content:"● ";font-size:10px;vertical-align:1px}
+.navbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s4);margin:0 0 var(--s5)}
+.navbar .tabs{margin:0}
+.back{font-size:var(--f2);font-weight:700;text-decoration:none;display:inline-block;transition:transform .18s var(--ease)}
+.back:hover{transform:translateX(-3px)}
+/* 注記（短い見出し＋1〜2行） */
+.notes{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.notes li{font-size:var(--f2);color:var(--label);padding-left:var(--s3);border-left:3px solid var(--g200)}
+.notes li b{color:var(--text)}
+.notes li.dec{border-left-color:var(--key)}
+.notes li.need{border-left-color:var(--error)}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.tag.dec{background:var(--key-50);color:var(--key)}
+.tag.need{background:var(--error);color:#fff}
+.tag.kentou{background:#fff;color:var(--error);border:1px solid var(--error);padding:0 5px}
+details.more{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3) var(--s5);margin-top:var(--s3)}
+details.more summary{cursor:pointer;font-weight:700;color:var(--key)}
+.foot{margin-top:var(--s7);padding-top:var(--s4);border-top:1px solid var(--line);font-size:var(--f1);color:var(--label)}
+.foot p{margin:0 0 var(--s1)}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+figure a{display:block;overflow:hidden;border-radius:4px}
+figure a img,.wide a img{transition:transform .6s var(--ease)}
+figure a:hover img,.wide a:hover img{transform:scale(1.025)}
+.wide a{display:block;overflow:hidden;border-radius:4px}
+figcaption{font-size:var(--f1);color:var(--label);margin-top:var(--s1)}
+@media screen and (max-width:760px){
+  .wrap{padding:var(--s5) var(--s4) var(--s6)}
+  .top h1{font-size:24px}
+  .kpi .v{font-size:28px}
+}
+/* 動き（js() と組み合わせる）。スクロールで順に出る・見出しがせり上がる */
+.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0ms)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js .top h1,.js .top .ph{animation:rh-rise .9s var(--ease) both}
+.js .top .ph{animation-delay:.12s}
+@keyframes rh-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}
+  .js [data-reveal]{opacity:1;transform:none}
+}
+@media print{
+  body::before{display:none}
+  .js [data-reveal]{opacity:1!important;transform:none!important}
+  *{animation:none!important;transition:none!important}
+}
+
+.wrap{max-width:1240px;padding:0 var(--s5) var(--s7)}
+.hero{position:relative;padding:var(--s7) 0 var(--s6)}
+.hero .big{position:absolute;right:-.04em;top:-.1em;font-family:var(--num);font-weight:600;font-size:clamp(160px,24vw,300px);line-height:1;letter-spacing:-.04em;color:var(--key);opacity:.07;pointer-events:none;user-select:none;will-change:transform}
+.hero .eyebrow{margin:0 0 var(--s3);font-size:var(--f1);font-weight:700;color:var(--key);letter-spacing:.12em}
+.hero h1{margin:0;font-size:clamp(34px,5vw,60px);line-height:1.18;font-weight:900;letter-spacing:-.015em}
+.hero h1 .w{display:inline-block}
+.hero .lead{margin:var(--s4) 0 0;max-width:44em;font-size:clamp(15px,1.5vw,18px);line-height:1.9;color:var(--label)}
+.js .hero .eyebrow,.js .hero h1 .w,.js .hero .lead,.js .toc{animation:rise .9s var(--ease) both}
+.js .hero h1 .w{animation-delay:calc(.1s + var(--i,0) * .08s)}.js .hero .lead{animation-delay:.4s}.js .toc{animation-delay:.55s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+/* 案の目次（押せる行） */
+.toc{margin:var(--s6) 0 0;border-top:1px solid var(--text)}
+.toc a{display:grid;grid-template-columns:56px minmax(0,1fr) auto 32px;align-items:center;gap:var(--s3);padding:14px 0;border-bottom:1px solid var(--line);color:var(--text);text-decoration:none;transition:padding .3s var(--ease),color .25s var(--ease)}
+.toc a .n{font-family:var(--num);font-weight:600;font-size:var(--f4);color:var(--label);transition:color .25s var(--ease)}
+.toc a b{font-size:var(--f3);font-weight:900}
+.toc a small{font-size:var(--f1);font-weight:700;color:var(--label);letter-spacing:.06em}
+.toc a .go{font-family:var(--num);font-size:var(--f4);color:var(--label);transition:transform .3s var(--ease),color .25s var(--ease);text-align:right}
+.toc a:hover{padding-left:10px;color:var(--key)}.toc a:hover .n,.toc a:hover .go{color:var(--key)}.toc a:hover .go{transform:translateX(6px)}
+/* 4つの入口 */
+.sec2{margin:var(--s7) 0 var(--s4)}
+.sec2 h2{margin:0;font-size:var(--f4);font-weight:900}
+.sec2 h2 small{display:block;font-size:var(--f1);font-weight:700;color:var(--label);letter-spacing:.06em;margin-bottom:4px}
+.sec2 p{margin:var(--s2) 0 0;font-size:var(--f2);color:var(--label)}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5)}
+.tile{position:relative;display:grid;grid-template-rows:auto auto;gap:var(--s4);padding:var(--s4);background:#fff;border:1px solid var(--line);border-radius:4px;color:var(--text);text-decoration:none;transition:border-color .35s var(--ease),transform .45s var(--ease),box-shadow .45s var(--ease)}
+.tile .num{position:absolute;left:var(--s4);top:var(--s3);font-family:var(--num);font-weight:600;font-size:var(--f5);line-height:1;color:var(--text);z-index:2;background:#fff;padding:4px 8px 4px 0}
+.tile .pic{display:block;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.tile .pic img{display:block;width:100%;aspect-ratio:364/257;object-fit:cover;transition:transform .9s var(--ease)}
+.tile .tx{display:grid;gap:var(--s2)}
+.tile .hd{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tile .hd b{font-size:clamp(20px,2vw,26px);font-weight:900;letter-spacing:-.01em}
+.kumi{font-style:normal;font-weight:700;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--g400);color:var(--label)}.kumi.v{border-color:var(--key);color:var(--key)}
+.tile .cm{font-size:var(--f1);font-weight:700;color:var(--label);letter-spacing:.06em}
+.tile .pp{font-size:var(--f2);line-height:1.8}
+.tile .btn{justify-self:start;display:inline-flex;align-items:center;gap:10px;margin-top:var(--s2);padding:9px 16px;border:1px solid var(--text);border-radius:999px;font-size:var(--f2);font-weight:700;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.tile .btn .ar{font-family:var(--num);transition:transform .3s var(--ease)}
+.tile:hover{border-color:var(--key);transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(28,30,35,.5)}
+.tile:hover .pic img{transform:scale(1.03)}
+.tile:hover .btn{background:var(--key);border-color:var(--key);color:#fff}.tile:hover .btn .ar{transform:translateX(5px)}
+.tile:active{transform:translateY(-1px)}
+/* 4案の違い */
+.diff{margin:var(--s7) 0 0}
+.tw{overflow-x:auto;border-top:1px solid var(--text)}
+.tbl{min-width:880px;background:transparent}
+.tbl thead th{background:transparent;border-bottom:1px solid var(--text);padding:var(--s3) var(--s3) var(--s2) 0;font-size:var(--f2);color:var(--text)}
+.tbl thead th .n{display:block;font-family:var(--num);font-weight:600;font-size:var(--f1);color:var(--label);letter-spacing:.04em;margin-bottom:2px}
+.tbl th,.tbl td{padding:var(--s3) var(--s3) var(--s3) 0;line-height:1.7}
+.tbl tbody th{color:var(--label);font-size:var(--f1);letter-spacing:.04em;white-space:nowrap;vertical-align:top}
+.foot{border-top:0}
+.js [data-rv]{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js [data-rv].in{opacity:1;transform:none}
+@media screen and (max-width:760px){.wrap{padding:0 var(--s4) var(--s6)}.hero{padding:var(--s6) 0 var(--s5)}.hero .big{font-size:120px}.tiles{grid-template-columns:1fr}.toc a{grid-template-columns:44px minmax(0,1fr) 24px}.toc a small{display:none}}
+@media (prefers-reduced-motion:reduce){.hero .big{transform:none!important}}
+</style></head><body><div class="wrap">
+<section class="hero"><div class="big" id="big" aria-hidden="true">4</div>
+<p class="eyebrow">らへん ゼロ号</p>
+<h1><span class="w" style="--i:0">全ページの</span><span class="w" style="--i:1">レイアウト案</span><span class="w" style="--i:2">　4つ</span></h1>
+<p class="lead">冊子1冊（P1〜P20）ぶんのレイアウト案です。どの案も、1見開きずつ見る・本のようにめくって見る・PDFで見る、ができます。B5実寸。写真と広告は灰色の枠、本文の多くはダミー文です。</p>
+<nav class="toc" aria-label="案の一覧"><a href="plan1/index.html"><span class="n">01</span><b>道順の絵巻</b><small>E・H・J</small><span class="go" aria-hidden="true">→</span></a><a href="plan2/index.html"><span class="n">02</span><b>ことばの縦組み</b><small>A・G・J</small><span class="go" aria-hidden="true">→</span></a><a href="plan3/index.html"><span class="n">03</span><b>問いと町の声</b><small>新しい縦（型S）・H・J</small><span class="go" aria-hidden="true">→</span></a><a href="plan4/index.html"><span class="n">04</span><b>読む頁と見る頁</b><small>F・I・L</small><span class="go" aria-hidden="true">→</span></a></nav></section>
+<div class="sec2" data-rv><h2><small>4つの案</small>見開きの見本から開く</h2><p>見本はどれも、お店の記事（P6–P7・アンポン）の見開きです。押すと、その案のページが開きます。</p></div>
+<section class="tiles"><a class="tile" href="plan1/index.html" data-rv style="--d:0ms"><span class="num">01</span><span class="pic"><img src="plan1/04_P06-P07.png" alt="案1 道順の絵巻 の P6–P7" loading="lazy"></span><span class="tx"><span class="hd"><b>道順の絵巻</b><i class="kumi v">縦組み</i></span><span class="cm">E・H・J</span><span class="pp">上に文、下に写真の帯。北口から一品まで、読む順＝歩く順。</span><span class="btn">この案を見る<span class="ar">→</span></span></span></a><a class="tile" href="plan2/index.html" data-rv style="--d:90ms"><span class="num">02</span><span class="pic"><img src="plan2/04_P06-P07.png" alt="案2 ことばの縦組み の P6–P7" loading="lazy"></span><span class="tx"><span class="hd"><b>ことばの縦組み</b><i class="kumi v">縦組み</i></span><span class="cm">A・G・J</span><span class="pp">店の人のことばを大きく縦に。右から左へ読み、左下で終わる。</span><span class="btn">この案を見る<span class="ar">→</span></span></span></a><a class="tile" href="plan3/index.html" data-rv style="--d:180ms"><span class="num">03</span><span class="pic"><img src="plan3/04_P06-P07.png" alt="案3 問いと町の声 の P6–P7" loading="lazy"></span><span class="tx"><span class="hd"><b>問いと町の声</b><i class="kumi v">縦組み</i></span><span class="cm">新しい縦（型S）・H・J</span><span class="pp">1つの問いを号の最後まで通す。店の人と町の人の声を縦の帯で並べ、読み終わると一品に着く。</span><span class="btn">この案を見る<span class="ar">→</span></span></span></a><a class="tile" href="plan4/index.html" data-rv style="--d:270ms"><span class="num">04</span><span class="pic"><img src="plan4/04_P06-P07.png" alt="案4 読む頁と見る頁 の P6–P7" loading="lazy"></span><span class="tx"><span class="hd"><b>読む頁と見る頁</b><i class="kumi">横組み</i></span><span class="cm">F・I・L</span><span class="pp">右ページで読ませ、左ページは大きな写真で見せる。全部横組みで、真ん中は1ページ全部の写真。</span><span class="btn">この案を見る<span class="ar">→</span></span></span></a></section>
+<section class="diff"><div class="sec2" data-rv><h2><small>比べる</small>4案の違い</h2><p>観点ごとに横に読むと、案の違いが分かります。細かい違いは、各案のページの「まだ決まっていないこと」と見開きの説明に。</p></div>
+<div class="tw" data-rv><table class="tbl"><thead><tr><th>観点</th><th><span class="n">01</span>道順の絵巻</th><th><span class="n">02</span>ことばの縦組み</th><th><span class="n">03</span>問いと町の声</th><th><span class="n">04</span>読む頁と見る頁</th></tr></thead><tbody><tr><th>記事の向き</th><td>縦組み13ページ・横組み2ページ（P14・P15）</td><td>縦組み13ページ・横組み1ページ（P14）・縦横半々1ページ（P15）</td><td>縦組み12ページ・縦横半々2ページ（P14・P15）・写真だけ1ページ（P11）</td><td>横組み15ページ（縦組みなし）</td></tr><tr><th>骨組み</th><td>上に文、下に写真の帯。北口から一品まで、読む順＝歩く順</td><td>縦の帯を右から左へ。店の人のことばで入り、左下で終わる</td><td>右から、地の文 → 町の写真 → 声の帯 → 一品の写真。読み終わると一品に着く</td><td>右ページで読ませ、左ページは大きな写真で見せる</td></tr><tr><th>写真</th><td>同じ高さの写真4点を、歩く順に下の帯に並べる</td><td>のど側に大きい1枚（紙の端まで）と、小口に小さい1枚</td><td>町と人は黒1色、一品と店の中はカラー。一品は縦長に大きく</td><td>縦長の大きい1枚と小さい1枚。真ん中の P11 は1ページ全部</td></tr><tr><th>見出し</th><td>記事の題（凸版文久見出し明朝）</td><td>店の人のことば（A1明朝）。店名は見出しにしない</td><td>記事の題（凸版文久見出し明朝）と、号を通す「今号の問い」</td><td>記事の題（A1明朝）</td></tr><tr><th>色</th><td>墨と藍（番号だけ）</td><td>墨1色</td><td>墨と藍（今号の問いの札だけ）</td><td>墨1色</td></tr><tr><th>取材で集めるもの</th><td>ふつうの取材に加えて、北口から店までの道順の写真</td><td>ふつうの取材に加えて、見出しにする店の人のひとこと</td><td>ふつうの取材に加えて、常連・近所の人の声（各店2人）と掲載の許可、問いの答え（8人）</td><td>ふつうの取材だけ</td></tr><tr><th>仕上げの道具</th><td>縦組みのできる組版ソフト（InDesign など）</td><td>縦組みのできる組版ソフト（InDesign など）</td><td>縦組みのできる組版ソフト（InDesign など）</td><td>横組みだけなので、Figma など横組みの道具でも仕上げられる</td></tr></tbody></table></div></section>
+<footer class="foot"><p>色の使い方（色は少なく・色だけに頼らない・強調は1つ）は、デジタル庁「ダッシュボードデザインの実践ガイドブック」（2026年3月31日更新）の考え方に沿っています。</p></footer>
+</div><script>(function(){var red=matchMedia('(prefers-reduced-motion: reduce)').matches,big=document.getElementById('big');
+if(!red&&big){var t=false;function px(){big.style.transform='translateY('+(window.scrollY*-0.22).toFixed(1)+'px)';t=false;}addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(px);}},{passive:true});px();}
+var rv=[].slice.call(document.querySelectorAll('[data-rv]'));
+if(red||!('IntersectionObserver' in window)){rv.forEach(function(el){el.classList.add('in');});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.05});rv.forEach(function(el){io.observe(el);});}})();</script><script>document.documentElement.classList.add("js");</script></body></html>
