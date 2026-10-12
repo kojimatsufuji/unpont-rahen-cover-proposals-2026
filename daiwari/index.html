@@ -280,6 +280,9 @@ section { padding: clamp(64px, 8.5vw, 116px) 0; scroll-margin-top: var(--nav-h);
 .comp-note { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
 
 .minis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px 18px; margin-top: clamp(40px, 5vw, 64px); list-style: none; padding: 0; }
+/* 見開きの並びは右綴じの冊子と同じく、右上の01から左へ、左下の10まで（2026-10-12 koji）。スマホは1列で01から順に */
+.minis { direction: rtl; }
+.minis > li { direction: ltr; }
 .mini a { display: block; color: var(--ink); text-decoration: none; }
 .mini .mh { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; margin-bottom: 8px; }
 .mini .mh b { font-family: var(--num); font-size: 15px; font-weight: 600; }
@@ -509,6 +512,7 @@ section { padding: clamp(64px, 8.5vw, 116px) 0; scroll-margin-top: var(--nav-h);
   .st-no { font-size: 44px; }
 }
 @media screen and (max-width: 560px) {
+  .minis { direction: ltr; grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .todo-item { padding: 76px 22px 22px; }
   .todo-no { left: 22px; top: 22px; font-size: 38px; }
   .todo-item::before { left: 22px; right: 22px; }
