@@ -1,150 +1,235 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head><meta name="robots" content="noindex,nofollow">
-<meta charset="UTF-8">
+<head>
+<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>らへん 表紙デザイン共有</title>
+<title>らへん ゼロ号 制作資料</title>
+<script>document.documentElement.classList.add("js")</script>
+<!-- 2026-10-12 koji「表紙の型、台割、印刷、ゼロ号全ページ案をまとめた上位リンクページ」。正本：projects/unpontフリーペーパー/assets/edit/hub/index.html
+     一覧のページなので1〜2画面に収める。色は紙・墨・藍・赤の4つ（赤は「まだ決まっていないこと」だけ）。台割のページと同じ藍。 -->
 <style>
-  :root {
-    --paper: #F1ECE2;
-    --paper-raised: #FFFFFF;
-    --ink: #211D18;
-    --ink-soft: #6B6255;
-    --line: #DDD2BF;
-    --accent: #AD4A2A;
-    --shadow: 0 1px 2px rgba(33,29,24,.06), 0 8px 24px rgba(33,29,24,.07);
+  :root{
+    color-scheme:light;
+    --paper:#F3F1EB; --card:#FFFFFF; --ink:#1F1E1A; --ink-soft:#5F5B52; --line:#DCD7CB;
+    --brand:#2A418C; --brand-tint:#E4E8F4; --alert:#B8361F; --alert-tint:#FBE8E2;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #16140F;
-      --paper-raised: #201C16;
-      --ink: #EFE8DA;
-      --ink-soft: #A69C89;
-      --line: #3A3226;
-      --accent: #E07A52;
-      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
-    }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:44px 28px 56px}
+  .mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif}
+
+  /* 冒頭：何の資料か・仕様・決めること */
+  header{display:grid;grid-template-columns:1.25fr 1fr;gap:28px 40px;align-items:end;margin-bottom:30px}
+  .kicker{margin:0 0 10px;font-size:12px;letter-spacing:.16em;color:var(--brand);font-weight:600}
+  h1{margin:0 0 12px;font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.25;letter-spacing:.02em}
+  .lead{margin:0 0 16px;color:var(--ink-soft);font-size:14.5px;max-width:34em}
+  .spec{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .spec li{font-size:12.5px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 12px;white-space:nowrap}
+  .spec b{font-weight:600}
+  .todo{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--alert);border-radius:6px;padding:16px 18px}
+  .todo h2{margin:0 0 8px;font-size:13px;letter-spacing:.08em;color:var(--alert);display:flex;align-items:baseline;gap:8px}
+  .todo h2 .n{font-size:22px;line-height:1;font-weight:700}
+  .todo ol{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+  .todo li{font-size:13px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+  .todo li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--alert);transform:translateY(-1px)}
+  .todo li span{color:var(--ink-soft)}
+
+  /* 4つの入口 */
+  .doors{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;list-style:none}
+  .door{position:relative}
+  .door a{display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
+    border-radius:8px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .door a:hover,.door a:focus-visible{transform:translateY(-4px);border-color:var(--brand);box-shadow:0 14px 30px rgba(42,65,140,.14);outline:none}
+  .pv{height:188px;background:var(--brand-tint);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .no{font-size:11.5px;letter-spacing:.14em;color:var(--brand);font-weight:700}
+  .ttl{margin:0;font-size:19px;font-weight:600;line-height:1.35}
+  .desc{margin:0;font-size:12.5px;color:var(--ink-soft);flex:1}
+  .meta{font-size:11.5px;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:9px;margin-top:4px}
+  .go{color:var(--brand);font-weight:700;font-size:13px;display:inline-flex;gap:4px;align-items:center}
+  .go i{font-style:normal;transition:transform .2s ease}
+  .door a:hover .go i{transform:translateX(4px)}
+  .flag{position:absolute;top:10px;left:10px;font-size:10.5px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--alert);border-radius:3px;padding:2px 7px;z-index:2}
+
+  /* 見本：台割（20ページの小さな図） */
+  .map{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;width:82%}
+  .sp{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--brand);padding:1px;border-radius:2px;aspect-ratio:364/257}
+  .sp span{background:#fff;position:relative}
+  .sp span.ad{background:repeating-linear-gradient(45deg,#c9cfe3 0 2px,#fff 2px 4px)}
+  .sp span.st{background:var(--brand)}
+  .sp span.cv{background:#8f9bc4}
+  .legend{position:absolute;left:12px;bottom:9px;display:flex;gap:10px;font-size:10px;color:var(--ink-soft)}
+  .legend i{display:inline-block;width:9px;height:9px;margin-right:4px;vertical-align:-1px;border:1px solid var(--brand)}
+  .legend i.st{background:var(--brand)} .legend i.ad{background:repeating-linear-gradient(45deg,#c9cfe3 0 2px,#fff 2px 4px)}
+  /* 見本：表紙 */
+  .pv.cov img{height:88%;width:auto;box-shadow:0 6px 18px rgba(0,0,0,.18);border-radius:1px;transform:rotate(-2deg);transition:transform .3s ease}
+  .door a:hover .pv.cov img{transform:rotate(0) scale(1.03)}
+  .pv.cov .stack{position:absolute;height:84%;aspect-ratio:182/257;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12);transform:translateX(26px) rotate(5deg)}
+  /* 見本：全ページ案（4案の見開き） */
+  .pv.lay{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:12px;align-content:center}
+  .pv.lay img{width:100%;aspect-ratio:364/257;object-fit:cover;border-radius:2px;box-shadow:0 2px 6px rgba(0,0,0,.14);transition:transform .25s ease}
+  .door a:hover .pv.lay img:nth-child(odd){transform:translateY(-2px)}
+  .door a:hover .pv.lay img:nth-child(even){transform:translateY(2px)}
+  /* 見本：見積（棒） */
+  .pv.est{flex-direction:column;align-items:stretch;justify-content:center;padding:14px 18px;gap:9px;background:var(--card);border-bottom:1px solid var(--line)}
+  .big{display:flex;align-items:baseline;gap:6px}
+  .big b{font-size:28px;font-weight:700;letter-spacing:.01em;color:var(--brand);font-variant-numeric:tabular-nums}
+  .big small{font-size:11.5px;color:var(--ink-soft)}
+  .bars{display:grid;gap:5px}
+  .bar{display:grid;grid-template-columns:44px 1fr 66px;align-items:center;gap:6px;font-size:10.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  .bar .tr{height:8px;background:var(--brand-tint);border-radius:4px;overflow:hidden}
+  .bar .tr span{display:block;height:100%;background:var(--brand);border-radius:4px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+  .bar em{font-style:normal;text-align:right;color:var(--ink)}
+
+  /* 過去の表紙案（畳む） */
+  details.past{margin-top:30px;border-top:1px solid var(--line);padding-top:14px}
+  details.past summary{cursor:pointer;font-size:13px;color:var(--ink-soft);list-style:none;display:inline-flex;gap:8px;align-items:center}
+  details.past summary::-webkit-details-marker{display:none}
+  details.past summary::before{content:"＋";color:var(--brand);font-weight:700}
+  details.past[open] summary::before{content:"－"}
+  .pastlist{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 20px;margin:14px 0 0;padding:0;list-style:none}
+  .pastlist a{display:block;text-decoration:none;color:var(--ink);font-size:13px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .pastlist a:hover{color:var(--brand)}
+  .pastlist small{display:block;color:var(--ink-soft);font-size:11.5px}
+  footer{margin-top:26px;font-size:11.5px;color:var(--ink-soft)}
+
+  /* 動き：順に現れる（動きを減らす設定のときは止める） */
+  .js .rise{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .rise.on{opacity:1;transform:none}
+  .js .sp{opacity:0;transform:scale(.9);transition:opacity .35s ease,transform .35s ease}
+  .on .sp{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .rise,.sp{opacity:1!important;transform:none!important;transition:none!important}
+    .bar .tr span{transition:none!important}
+    .door a,.go i,.pv img{transition:none!important}
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
+  @media (max-width:980px){
+    header{grid-template-columns:1fr}
+    .doors{grid-template-columns:repeat(2,1fr)}
   }
-  .wrap { max-width: 640px; padding: 64px 28px; }
-  .kicker {
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    font-size: 11.5px;
-    letter-spacing: .14em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin: 0 0 20px;
+  @media (max-width:560px){
+    .wrap{padding:28px 16px 40px}
+    .doors{grid-template-columns:1fr}
+    .pastlist{grid-template-columns:1fr}
+    .pv{height:170px}
   }
-  h1 {
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-    font-weight: 600;
-    font-size: clamp(30px, 6vw, 42px);
-    line-height: 1.3;
-    margin: 0 0 18px;
-  }
-  p.lead { color: var(--ink-soft); font-size: 15px; margin: 0 0 40px; max-width: 46em; }
-  .links { display: grid; gap: 16px; }
-  a.card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: var(--paper-raised);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    box-shadow: var(--shadow);
-    padding: 22px 24px;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  a.card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(33,29,24,.1), 0 16px 32px rgba(33,29,24,.12); }
-  a.card .tag {
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    font-size: 10.5px;
-    letter-spacing: .08em;
-    color: var(--accent);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 8px;
-  }
-  a.card .name {
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-    font-size: 19px;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  a.card .desc { font-size: 13px; color: var(--ink-soft); }
-  footer { margin-top: 40px; font-size: 12px; color: var(--ink-soft); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p class="kicker">unpont free paper — Vol.01 創刊号 制作提案</p>
-  <h1>らへん 表紙デザイン共有</h1>
-  <p class="lead">創刊号の表紙候補デザインと、モック号の台割・印刷見積をまとめています。表紙の全体を見るなら「全バージョン一覧」から。</p>
-  <div class="links">
-    <a class="card" href="cover-type/">
-      <span class="tag">最新・検討中</span>
-      <span class="name">表紙の型 5種 × 明朝体／ゴシック体（写真別の4版）</span>
-      <span class="desc">2026-09-22 MTGで絞った5案を型として組み直したもの。同じ型に4枚の写真を入れ替えて比べられます。</span>
-    </a>
-    <a class="card" href="layouts/">
-      <span class="tag">誌面レイアウト・4案</span>
-      <span class="name">モック号 全ページのレイアウト案（案1〜4・P1〜P20）</span>
-      <span class="desc">同じ記事を4つの組み方で全ページ組んだ見本です。見開きごとの画像・めくれる冊子・PDFで見られます（2026-10-11時点）。写真の多くは「ダミー」の仮置きで、文字の一部は仮の文章です。</span>
-    </a>
-    <a class="card" href="daiwari/">
-      <span class="tag">台割・たたき台</span>
-      <span class="name">モック号の台割（見開き・20P）</span>
-      <span class="desc">B5・20P・中綴じ・右綴じのページ割りを、見開きごとにまとめたもの（2026-09-27時点）。取材先の企業名など、一部を伏せています。</span>
-    </a>
-    <a class="card" href="estimate/">
-      <span class="tag">見積・参考</span>
-      <span class="name">印刷見積（B5・20P・中綴じ）</span>
-      <span class="desc">グラフィックとラクスルで、3,000・5,000・10,000部の印刷費を同じ条件で比べたもの（2026-09-27時点のサイトの価格表。正式な見積書ではありません）。</span>
-    </a>
-    <a class="card" href="all.html">
-      <span class="tag">全バージョン</span>
-      <span class="name">表紙デザイン 全バージョン一覧</span>
-      <span class="desc">v1〜v8までの全49案を制作順に。新しいバージョンはここに追加していきます。</span>
-    </a>
-    <a class="card" href="gallery-added.html">
-      <span class="tag">追加分</span>
-      <span class="name">表紙デザイン 追加8案</span>
-      <span class="desc">誌名ロゴをフォントに頼らず素材でつくる方式へ、3案を刷新した8案。最終決定ではありません。</span>
-    </a>
-    <a class="card" href="gallery-previous.html">
-      <span class="tag">前回まとめ</span>
-      <span class="name">表紙デザイン候補8案（初回）</span>
-      <span class="desc">最初に整理した8案のギャラリー。参考として残しています。</span>
-    </a>
-    <a class="card" href="v9-11-review.html">
-      <span class="tag">未検証・ボツ扱い</span>
-      <span class="name">v9〜v11 レビュー用一覧</span>
-      <span class="desc">別軸3系統×8案の制作途中版。koji判定により方向性を見直し中で、現時点では不採用。参考として残しています。</span>
-    </a>
-    <a class="card" href="logo-9.html">
-      <span class="tag">検討中</span>
-      <span class="name">誌名ロゴ「らへん」方向9案</span>
-      <span class="desc">太ゴシック／細明朝／巨大文字の3方向×3書体。既存フォントのみで生成なし。方向はまだ未確定です。</span>
-    </a>
-    <a class="card" href="cover-rough-6.html">
-      <span class="tag">検討中</span>
-      <span class="name">表紙 構成ラフ 6型</span>
-      <span class="desc">採用系統A/B/C/F/G/Iの配置検討。写真部分は灰色枡で、実写真・確定情報以外は伏せています。</span>
-    </a>
-  </div>
-  <footer>© unpont — 社内検討用資料</footer>
+  <header>
+    <div class="rise">
+      <p class="kicker">フリーペーパー「らへん」 ゼロ号</p>
+      <h1 class="mincho">ゼロ号の制作資料</h1>
+      <p class="lead">「街を好きになる、きっかけをつくる」地域のフリーペーパー「らへん」。本番の前の見本（ゼロ号）の、ページ割り・表紙・誌面・印刷費の資料を、作る順にまとめています。</p>
+      <ul class="spec">
+        <li><b>B5</b>（182×257mm）</li><li><b>20</b>ページ</li><li>中綴じ（ホチキス留め）</li><li>右綴じ（右から開く）</li><li>2026-10-12 時点</li>
+      </ul>
+    </div>
+    <section class="todo rise" aria-labelledby="todo-h">
+      <h2 id="todo-h"><span class="n">3</span>まだ決まっていないこと</h2>
+      <ol>
+        <li><div>誌面のレイアウトを4案から選ぶ <span>→ 03</span></div></li>
+        <li><div>表紙の型（5つ）と書体（明朝体／ゴシック体） <span>→ 02</span></div></li>
+        <li><div>台割の残り2件（P14 の中身・奥付の置き場所） <span>→ 01</span></div></li>
+      </ol>
+    </section>
+  </header>
+
+  <ul class="doors">
+    <li class="door rise">
+      <a href="daiwari/">
+        <div class="pv" id="map-pv"><div class="map" id="map" aria-hidden="true"></div>
+          <div class="legend"><span><i class="st"></i>お店の記事</span><span><i class="ad"></i>広告</span></div></div>
+        <div class="body">
+          <span class="no">01　設計図</span>
+          <h2 class="ttl mincho">台割</h2>
+          <p class="desc">20ページの、どこに何を載せるかを決めた表。冊子をめくるように、見開きごとに見られます。</p>
+          <div class="meta"><span>たたき台・2026-09-27</span><span class="go">開く<i>→</i></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="door rise">
+      <a href="cover-type/">
+        <span class="flag">検討中</span>
+        <div class="pv cov"><span class="stack"></span><img src="img/hub-cover.jpg" alt="表紙の型の見本（明朝体）" loading="lazy"></div>
+        <div class="body">
+          <span class="no">02　表紙</span>
+          <h2 class="ttl mincho">表紙の型</h2>
+          <p class="desc">MTGで絞った5つの型 × 明朝体／ゴシック体。同じ型に4枚の写真を入れ替えて比べられます。</p>
+          <div class="meta"><span>5型 × 2書体 × 写真4枚</span><span class="go">開く<i>→</i></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="door rise">
+      <a href="layouts/">
+        <span class="flag">検討中</span>
+        <div class="pv lay">
+          <img src="img/hub-plan1.jpg" alt="案1 道順の絵巻" loading="lazy"><img src="img/hub-plan2.jpg" alt="案2 ことばの縦組み" loading="lazy">
+          <img src="img/hub-plan3.jpg" alt="案3 問いと町の声" loading="lazy"><img src="img/hub-plan4.jpg" alt="案4 読む頁と見る頁" loading="lazy">
+        </div>
+        <div class="body">
+          <span class="no">03　誌面</span>
+          <h2 class="ttl mincho">ゼロ号 全ページ案</h2>
+          <p class="desc">同じ記事を4つの組み方で、P1〜P20 まで組んだ見本。見開き・めくれる冊子・PDFで見られます。</p>
+          <div class="meta"><span>4案・写真と広告は仮</span><span class="go">開く<i>→</i></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="door rise">
+      <a href="estimate/">
+        <div class="pv est" id="est">
+          <div class="big"><b data-to="91410">0</b><small>円〜／3,000部（税込・送料込み）</small></div>
+          <div class="bars">
+            <div class="bar"><span>3,000部</span><div class="tr"><span data-w="46"></span></div><em>1部 30.5円</em></div>
+            <div class="bar"><span>5,000部</span><div class="tr"><span data-w="61"></span></div><em>1部 24.4円</em></div>
+            <div class="bar"><span>10,000部</span><div class="tr"><span data-w="100"></span></div><em>1部 19.8円</em></div>
+          </div>
+        </div>
+        <div class="body">
+          <span class="no">04　印刷</span>
+          <h2 class="ttl mincho">印刷見積</h2>
+          <p class="desc">グラフィックとラクスルを同じ条件で比べた参考の金額。3つの部数とも、グラフィックの方が安い。</p>
+          <div class="meta"><span>サイトの価格表・2026-09-27</span><span class="go">開く<i>→</i></span></div>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <details class="past">
+    <summary>過去の表紙案・参考（6件）</summary>
+    <ul class="pastlist">
+      <li><a href="all.html">表紙デザイン 全バージョン一覧<small>v1〜v8 の全49案を制作順に</small></a></li>
+      <li><a href="gallery-added.html">表紙デザイン 追加8案<small>誌名ロゴを素材でつくる方式に刷新</small></a></li>
+      <li><a href="gallery-previous.html">表紙デザイン候補8案（初回）<small>最初に整理した8案</small></a></li>
+      <li><a href="cover-rough-6.html">表紙 構成ラフ 6型<small>配置の検討（写真は灰色の枠）</small></a></li>
+      <li><a href="logo-9.html">誌名ロゴ「らへん」方向9案<small>3方向×3書体（方向は未確定）</small></a></li>
+      <li><a href="v9-11-review.html">v9〜v11 レビュー用一覧<small>不採用・参考として残す</small></a></li>
+    </ul>
+  </details>
+  <footer>© unpont — 社内検討用の資料です。金額・日付はそれぞれの時点のもので、写真・広告・文章の一部は仮です。</footer>
 </div>
+<script>
+(function(){
+  // 台割の小さな図：10見開き（右ページ｜左ページ）。st＝お店の記事、ad＝広告、cv＝表紙
+  var spreads=[["cv","ad"],["ad",""],["",""],["st","st"],["st","st"],["st","st"],["",""],["",""],["",""],["ad","ad"]];
+  var map=document.getElementById("map");
+  spreads.forEach(function(s,i){var d=document.createElement("div");d.className="sp";d.style.transitionDelay=(i*55)+"ms";
+    d.innerHTML='<span class="'+s[1]+'"></span><span class="'+s[0]+'"></span>';map.appendChild(d);});
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function countUp(el){var to=+el.dataset.to;if(reduce){el.textContent=to.toLocaleString("ja-JP");return;}
+    var t0=null;function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(to*e).toLocaleString("ja-JP");if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  function reveal(el){el.classList.add("on");
+    el.querySelectorAll("[data-to]").forEach(countUp);
+    el.querySelectorAll("[data-w]").forEach(function(b){b.style.width=b.dataset.w+"%";});}
+  var items=document.querySelectorAll(".rise");
+  if(reduce||!("IntersectionObserver" in window)){items.forEach(reveal);return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});},{threshold:.15});
+  items.forEach(function(el,i){el.style.transitionDelay=(i*90)+"ms";io.observe(el);});
+})();
+</script>
 </body>
 </html>
