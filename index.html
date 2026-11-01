@@ -102,6 +102,23 @@
     .js .rise,.js .sp{opacity:1!important;transform:none!important;transition:none!important}
     .bar .tr span,.door a,.btn,.pv img{transition:none!important}
   }
+
+  /* 確定版の入口（いちばん新しい資料。4枚のカードより前に、横長の1枚で） */
+  .feat{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);text-decoration:none;color:inherit;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 4px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .feat:hover,.feat:focus-visible{transform:translateY(-4px);border-color:var(--brand);box-shadow:0 16px 32px rgba(42,65,140,.15)}
+  .feat:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+  .feat .pv{border-bottom:0;border-right:1px solid var(--line);padding:22px;min-height:240px}
+  .feat .pv img{width:100%;height:auto;display:block;box-shadow:0 8px 22px rgba(27,26,23,.16)}
+  .feat .tx{display:flex;flex-direction:column;padding:6px 0 0}
+  .feat .new{display:inline-block;margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.12em;color:#fff;background:var(--ink);border-radius:4px;padding:3px 8px}
+  .feat .ttl{font-size:28px}
+  .feat ul.done{flex:1}
+  .feat ul.done{margin:10px 20px 0;padding:0;list-style:none;font-size:13px;line-height:1.7;color:var(--ink-2)}
+  .feat ul.done li{padding-left:1.1em;text-indent:-1.1em}
+  .feat ul.done li::before{content:"・"}
+  .feat:hover .btn{gap:10px}
+  @media (max-width:860px){ .feat{grid-template-columns:1fr} .feat .pv{border-right:0;border-bottom:1px solid var(--line);min-height:0} }
   @media (max-width:1020px){ .doors{grid-template-columns:repeat(2,1fr)} }
   @media (max-width:600px){
     .wrap{padding:32px 16px 44px}
@@ -118,15 +135,35 @@
   <header class="rise">
     <p class="kicker">フリーペーパー「らへん」 ゼロ号</p>
     <h1 class="mincho">ゼロ号の制作資料</h1>
-    <p class="lead">「街を好きになる、きっかけをつくる」地域のフリーペーパー「らへん」。本番の前の見本（ゼロ号）の資料を、作る順に4つにまとめています。</p>
+    <p class="lead">「街を好きになる、きっかけをつくる」地域のフリーペーパー「らへん」。本番の前の見本（ゼロ号）の資料を、作る順に4つと、いま組み替えている確定版にまとめています。</p>
     <ul class="facts">
       <li><small>判型</small><b>B5（182×257mm）</b></li>
       <li><small>ページ</small><b>20ページ</b></li>
       <li><small>綴じ方</small><b>中綴じ・右綴じ</b></li>
       <li class="todo"><small>まだ決まっていないこと</small><b>3件（赤い札）</b></li>
-      <li><small>時点</small><b>2026-10-12</b></li>
+      <li><small>時点</small><b>2026-11-01</b></li>
     </ul>
   </header>
+
+  <div class="flowhead rise">
+    <h2>いま作っているもの</h2>
+    <p>全ページ案から案2を選び、決まったページから組み替えています。</p>
+  </div>
+  <a class="feat rise" href="final/">
+    <div class="pv"><img src="img/hub-final.jpg" alt="ゼロ号 確定版の見開き（P2–P3）" width="900" height="635"></div>
+    <div class="tx">
+      <div class="step"><span class="n">05</span><span class="cat">誌面</span><span class="new">2026-11-01 新しく追加</span></div>
+      <h2 class="ttl mincho">ゼロ号 確定版</h2>
+      <p class="desc">案2「ことばの縦組み」をもとに、決まったページ構成から順に組み替えている見本。見開き・めくれる冊子・PDFで。</p>
+      <ul class="done">
+        <li>P2 をらへんのイメージ写真に／P5 の編集部を横長の1枚に</li>
+        <li>P12–13 団地バトンマーケット／P14–15 コラム3本とおうちごはん</li>
+        <li>P16–17 企業の取材と裏表紙は「未定」の札</li>
+      </ul>
+      <p class="decide"><b>決めること</b><span>P2 のイメージ写真・コラムの題と書き手 ほか</span></p>
+      <div class="foot"><small>写真と広告は仮<br>2026-11-01</small><span class="btn">開く <span aria-hidden="true">→</span></span></div>
+    </div>
+  </a>
 
   <div class="flowhead rise">
     <h2>資料（作る順）</h2>
@@ -164,7 +201,7 @@
         <div class="step"><span class="n">03</span><span class="cat">誌面</span></div>
         <h2 class="ttl mincho">ゼロ号 全ページ案</h2>
         <p class="desc">同じ記事を4つの組み方で、P1〜P20 まで組んだ見本。見開き・めくれる冊子・PDFで。</p>
-        <p class="decide"><b>決めること</b><span>4つの案から1つ</span></p>
+        <p class="decide none"><span>案2に決定（2026-11-01）→ 上の「確定版」へ</span></p>
         <div class="foot"><small>写真と広告は仮<br>2026-10-12</small><span class="btn">開く <span aria-hidden="true">→</span></span></div>
       </a>
     </li>
