@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>らへん ゼロ号 表紙の2案</title>
+<style>
+:root { --bg:#f4f2ee; --ink:#1e1a17; --sub:#6b645c; --line:#d9d4cc; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.7; }
+header { max-width:1200px; margin:0 auto; padding:32px 16px 8px; }
+h1 { font-size:20px; margin:0 0 4px; }
+header p { margin:0; color:var(--sub); font-size:14px; }
+main { max-width:1200px; margin:0 auto; padding:16px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+figure { margin:0; }
+figure img { width:100%; height:auto; display:block; border:1px solid var(--line); background:#fff; }
+figcaption { margin-top:10px; font-size:14px; }
+figcaption b { font-size:16px; display:block; }
+figcaption span { color:var(--sub); }
+@media (max-width:700px) { main { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>らへん ゼロ号　表紙の2案</h1>
+  <p>写真・入れる文字は同じです。違うのは上の帯（誌名と文字の組み）です。B5・仕上がりの見え方。</p>
+</header>
+<main>
+  <figure><img src="cover_a.png" alt="案A：明朝の誌名「らへん」を帯の中央に置いた表紙">
+    <figcaption><b>案A　いまの確定版</b><span>誌名は明朝（A1明朝 Bold）。帯の中央に誌名、下にキャッチ、右下に TAKE FREE の囲み。</span></figcaption></figure>
+  <figure><img src="cover_b.png" alt="案B：太い作字の誌名「らへん」が帯からはみ出し、柿色の「へ」の中をキャッチが通る表紙">
+    <figcaption><b>案B　作字の誌名（デザイナー：アーリィ）</b><span>太い3字がくぐり合い、柿色の「へ」の中をキャッチが通る。帯は生成り、TAKE FREE は角丸の線枠。</span></figcaption></figure>
+</main>
+</body>
+</html>
