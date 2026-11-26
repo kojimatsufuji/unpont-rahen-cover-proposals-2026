@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>らへん ゼロ号 表紙の写真・2案</title>
+<style>
+:root { --bg:#f4f2ee; --ink:#1e1a17; --sub:#6b645c; --line:#d9d4cc; --brand:#2a418c; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.7; }
+header { max-width:1100px; margin:0 auto; padding:32px 16px 8px; }
+h1 { font-size:20px; margin:0 0 4px; }
+header p { margin:0; color:var(--sub); font-size:14px; }
+.bar { max-width:1100px; margin:0 auto; padding:12px 16px 0; display:flex; gap:8px; }
+.bar button { font:inherit; font-size:14px; padding:7px 16px; border-radius:999px; border:1px solid var(--line); background:#fff; color:var(--ink); cursor:pointer; }
+.bar button[aria-pressed="true"] { background:var(--brand); border-color:var(--brand); color:#fff; }
+main { max-width:1100px; margin:0 auto; padding:16px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+figure { margin:0; }
+figure img { width:100%; height:auto; display:block; border:1px solid var(--line); background:#fff; }
+figcaption { margin-top:10px; font-size:14px; }
+figcaption b { font-size:16px; display:block; }
+figcaption span { color:var(--sub); }
+main.flip { grid-template-columns:minmax(0,520px); justify-content:center; }
+main.flip figure { display:none; }
+main.flip figure.on { display:block; }
+.hint { display:none; max-width:1100px; margin:0 auto; padding:0 16px; color:var(--sub); font-size:13px; }
+main.flip + .hint { display:block; }
+@media (max-width:700px) { main { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>らへん ゼロ号　表紙の写真・2案</h1>
+  <p>デザイン（誌名・文字・帯）は同じで、写真だけを変えています。B5・仕上がりの見え方です。</p>
+</header>
+<div class="bar" role="group" aria-label="見え方">
+  <button type="button" id="b-side" aria-pressed="true">並べて見る</button>
+  <button type="button" id="b-flip" aria-pressed="false">切り替えて見る</button>
+</div>
+<main id="m">
+  <figure class="on"><img src="cover1.jpg" alt="案1：総菜の盛り合わせの写真を使った表紙">
+    <figcaption><b>案1　いまの写真</b><span>創菜店 mitsuami の総菜の盛り合わせ。人参・茄子・青唐辛子の色が主役。</span></figcaption></figure>
+  <figure><img src="cover2.jpg" alt="案2：肉の煮込みとマッシュポテトの写真を使った表紙">
+    <figcaption><b>案2　新しい写真</b><span>肉の煮込みとマッシュポテト。フォークと手が入り、これから食べる場面。</span></figcaption></figure>
+</main>
+<p class="hint">「切り替えて見る」では、写真を押すと案1と案2が入れ替わります。</p>
+<script>
+(function(){
+  var m=document.getElementById('m'), fs=m.querySelectorAll('figure'), bs=document.getElementById('b-side'), bf=document.getElementById('b-flip');
+  function set(flip){ m.classList.toggle('flip',flip); bs.setAttribute('aria-pressed',!flip); bf.setAttribute('aria-pressed',flip); }
+  bs.onclick=function(){set(false)}; bf.onclick=function(){set(true)};
+  fs.forEach(function(f,i){ f.addEventListener('click',function(){ if(!m.classList.contains('flip'))return; f.classList.remove('on'); fs[1-i].classList.add('on'); }); });
+})();
+</script>
+</body>
+</html>
